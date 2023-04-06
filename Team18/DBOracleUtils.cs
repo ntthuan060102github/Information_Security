@@ -111,7 +111,7 @@ namespace Tutorial.SqlConn
             OracleConnection conn = DBUtils.GetDBConnection();
 
             OracleCommand cmd = conn.CreateCommand();
-            cmd.CommandText = DBUtils.Dbschema + proc_name;
+            cmd.CommandText = proc_name; //DBUtils.Dbschema + 
             cmd.CommandType = CommandType.StoredProcedure;
 
             foreach (OracleParameter pa in parameters)

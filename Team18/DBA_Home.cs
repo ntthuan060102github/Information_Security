@@ -122,5 +122,10 @@ namespace Team18
         {
             OpenChildForm(new Forms.Form_EditPrivs(), sender);
         }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

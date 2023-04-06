@@ -26,7 +26,7 @@ namespace Team18
             password = txbPassword.Text;
             
 
-            if (username == "")
+            if (username == "" && false)
             {
                 MessageBox.Show("Vui lòng nhập Username","Error");
             }
@@ -34,10 +34,10 @@ namespace Team18
             {
                 try
                 {
-                    OracleDB.createConnectionString(username, password);
+                    OracleDB.createConnectionString("ATBM_QLNV", "team18");
                     OracleDB.conn = new OracleConnection(OracleDB.connectionString);
                     OracleDB.conn.Open();
-                    MessageBox.Show("Đăng nhập thành công!");
+                    /*MessageBox.Show("Đăng nhập thành công!");*/
                     DBA_Home home = new DBA_Home();
                     this.Hide();
                     home.ShowDialog();
