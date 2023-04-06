@@ -91,6 +91,8 @@
     <Compile Include="DBA_Home.Designer.cs">
       <DependentUpon>DBA_Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBOracleUtils.cs" />
+    <Compile Include="DBUtils.cs" />
     <Compile Include="Forms\Form_CheckPrivs.cs">
       <SubType>Form</SubType>
     </Compile>

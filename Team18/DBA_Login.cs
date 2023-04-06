@@ -35,8 +35,8 @@ namespace Team18
                 try
                 {
                     OracleDB.createConnectionString(username, password);
-                    OracleConnection conn = new OracleConnection(OracleDB.connectionString);
-                    conn.Open();
+                    OracleDB.conn = new OracleConnection(OracleDB.connectionString);
+                    OracleDB.conn.Open();
                     MessageBox.Show("Đăng nhập thành công!");
                     DBA_Home home = new DBA_Home();
                     this.Hide();
