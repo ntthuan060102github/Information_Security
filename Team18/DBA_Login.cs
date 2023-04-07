@@ -34,14 +34,12 @@ namespace Team18
             {
                 try
                 {
-                    OracleDB.createConnectionString("ATBM_QLNV", "team18");
-                    OracleDB.conn = new OracleConnection(OracleDB.connectionString);
-                    OracleDB.conn.Open();
+                    OracleDB.connectToOracle("ATBM_QLNV", "team18");
                     /*MessageBox.Show("Đăng nhập thành công!");*/
                     DBA_Home home = new DBA_Home();
                     this.Hide();
                     home.ShowDialog();
-                    this.Show();
+                    this.Close();
                 }
                 catch (Exception ex)
                 {

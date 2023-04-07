@@ -74,3 +74,42 @@ C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.csproj.
 C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.csproj.CoreCompileInputs.cache
 C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.exe
 C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.pdb
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\Team18.exe.config
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\Team18.exe
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\Team18.pdb
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.Buffers.dll
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.Memory.dll
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.Numerics.Vectors.dll
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.Text.Encodings.Web.dll
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.Text.Json.dll
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.ValueTuple.dll
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.Buffers.xml
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.Memory.xml
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.Numerics.Vectors.xml
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.Text.Encodings.Web.xml
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.Text.Json.xml
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\bin\Debug\System.ValueTuple.xml
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.csproj.AssemblyReference.cache
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.csproj.SuggestedBindingRedirects.cache
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.DBA_Home.resources
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.DBA_Login.resources
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_CheckPrivs.resources
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_CRUDuser_role.resources
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_EditPrivs.resources
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_GrantPrivs.resources
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_ListUser.resources
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_RevokePrivs.resources
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_ViewPrivs.resources
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Properties.Resources.resources
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.csproj.GenerateResource.cache
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.csproj.CoreCompileInputs.cache
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.csproj.CopyComplete
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.exe
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.pdb
