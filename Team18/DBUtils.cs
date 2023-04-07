@@ -32,7 +32,7 @@ namespace Tutorial.SqlConn
         
         public static OracleConnection GetDBConnection()
         {
-            string host = "LAPTOP-DVGEP05O";
+            string host = "127.0.0.1";
             int port = 1521;
             string sid = "xe";
 
