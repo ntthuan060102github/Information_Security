@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,15 +17,14 @@ namespace Team18.Forms
         public Form_ListUser()
         {
             InitializeComponent();
-            Console.WriteLine("start");
-            DataTable dt = new DataTable();
-            DBOracleUtils.ExecProc_OutputDataTable("SP_VIEW_LIST_USER", ref dt);
-            if (dt.Rows.Count <= 0) return;
-
-            foreach (DataRow dr in dt.Rows)
-            {
-                this.dataGridView1.Rows.Add(dr["USER_ID"], dr["USERNAME"], true, dr["CREATED"]);
-            }
+            OracleCommand cmd = OracleDB.conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SP_VIEW_LIST_USER";
+            cmd.Parameters.Add("O_CURSOR", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            OracleDataAdapter dataAdapter1 = new OracleDataAdapter(cmd);
+            DataTable dt1 = new DataTable();
+            dataAdapter1.Fill(dt1);
+            this.dataGridView1.DataSource = dt1.DefaultView;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

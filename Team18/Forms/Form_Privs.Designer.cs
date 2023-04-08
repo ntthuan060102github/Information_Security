@@ -59,14 +59,43 @@
             this.radioBtnTab = new System.Windows.Forms.RadioButton();
             this.tabRevoke = new System.Windows.Forms.TabPage();
             this.tabCheckPrivs = new System.Windows.Forms.TabPage();
-            this.tabEditPrivs = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBoxUser_Role = new System.Windows.Forms.ComboBox();
-            this.btnCheckPrivs = new System.Windows.Forms.Button();
-            this.dgCheckSysPrivs = new System.Windows.Forms.DataGridView();
             this.dgCheckTabPrivs = new System.Windows.Forms.DataGridView();
+            this.dgCheckSysPrivs = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnCheckPrivs = new System.Windows.Forms.Button();
+            this.comboBoxUser_Role = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tabEditPrivs = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panelRevokeTab = new System.Windows.Forms.Panel();
+            this.cbbObjTab_Revoke = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnRevokeTab = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbbPrivsTab_Revoke = new System.Windows.Forms.ComboBox();
+            this.cbbSubjectTab_Revoke = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panelRevokeSys = new System.Windows.Forms.Panel();
+            this.btnRevokeSys = new System.Windows.Forms.Button();
+            this.cbbSubjectSys_Revoke = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbbPrivsSys_Revoke = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.radioBtnRevokeSys = new System.Windows.Forms.RadioButton();
+            this.radioBtnRevokeTab = new System.Windows.Forms.RadioButton();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.cbbCMD_Edit = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cbbSubject_Edit = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbbObj_Edit = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.ckbWGO_Edit = new System.Windows.Forms.CheckBox();
+            this.btnEditPrivs = new System.Windows.Forms.Button();
+            this.cbbPrivs_Edit = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.tabControlPrivs.SuspendLayout();
             this.tabGrant.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -74,11 +103,18 @@
             this.panelTab.SuspendLayout();
             this.panelSys.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.tabRevoke.SuspendLayout();
             this.tabCheckPrivs.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCheckSysPrivs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgCheckTabPrivs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCheckSysPrivs)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.tabEditPrivs.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panelRevokeTab.SuspendLayout();
+            this.panelRevokeSys.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlPrivs
@@ -417,6 +453,7 @@
             // 
             // tabRevoke
             // 
+            this.tabRevoke.Controls.Add(this.panel6);
             this.tabRevoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabRevoke.Location = new System.Drawing.Point(4, 38);
             this.tabRevoke.Name = "tabRevoke";
@@ -437,16 +474,6 @@
             this.tabCheckPrivs.Text = "Kiểm tra quyền";
             this.tabCheckPrivs.UseVisualStyleBackColor = true;
             // 
-            // tabEditPrivs
-            // 
-            this.tabEditPrivs.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabEditPrivs.Location = new System.Drawing.Point(4, 38);
-            this.tabEditPrivs.Name = "tabEditPrivs";
-            this.tabEditPrivs.Size = new System.Drawing.Size(1242, 586);
-            this.tabEditPrivs.TabIndex = 3;
-            this.tabEditPrivs.Text = "Chỉnh sửa quyền";
-            this.tabEditPrivs.UseVisualStyleBackColor = true;
-            // 
             // panel4
             // 
             this.panel4.AutoScroll = true;
@@ -459,45 +486,17 @@
             this.panel4.Size = new System.Drawing.Size(1242, 586);
             this.panel4.TabIndex = 0;
             // 
-            // panel5
+            // dgCheckTabPrivs
             // 
-            this.panel5.Controls.Add(this.btnCheckPrivs);
-            this.panel5.Controls.Add(this.comboBoxUser_Role);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1242, 113);
-            this.panel5.TabIndex = 0;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(82, 42);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(329, 29);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Chọn user/role muốn kiểm tra";
-            // 
-            // comboBoxUser_Role
-            // 
-            this.comboBoxUser_Role.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxUser_Role.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxUser_Role.FormattingEnabled = true;
-            this.comboBoxUser_Role.Location = new System.Drawing.Point(439, 39);
-            this.comboBoxUser_Role.Name = "comboBoxUser_Role";
-            this.comboBoxUser_Role.Size = new System.Drawing.Size(446, 37);
-            this.comboBoxUser_Role.TabIndex = 10;
-            // 
-            // btnCheckPrivs
-            // 
-            this.btnCheckPrivs.Location = new System.Drawing.Point(956, 35);
-            this.btnCheckPrivs.Name = "btnCheckPrivs";
-            this.btnCheckPrivs.Size = new System.Drawing.Size(136, 42);
-            this.btnCheckPrivs.TabIndex = 11;
-            this.btnCheckPrivs.Text = "Kiểm tra";
-            this.btnCheckPrivs.UseVisualStyleBackColor = true;
-            this.btnCheckPrivs.Click += new System.EventHandler(this.btnCheckPrivs_Click);
+            this.dgCheckTabPrivs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgCheckTabPrivs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCheckTabPrivs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgCheckTabPrivs.Location = new System.Drawing.Point(0, 345);
+            this.dgCheckTabPrivs.Name = "dgCheckTabPrivs";
+            this.dgCheckTabPrivs.RowHeadersWidth = 51;
+            this.dgCheckTabPrivs.RowTemplate.Height = 24;
+            this.dgCheckTabPrivs.Size = new System.Drawing.Size(1242, 241);
+            this.dgCheckTabPrivs.TabIndex = 2;
             // 
             // dgCheckSysPrivs
             // 
@@ -511,17 +510,392 @@
             this.dgCheckSysPrivs.Size = new System.Drawing.Size(1242, 232);
             this.dgCheckSysPrivs.TabIndex = 1;
             // 
-            // dgCheckTabPrivs
+            // panel5
             // 
-            this.dgCheckTabPrivs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgCheckTabPrivs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCheckTabPrivs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgCheckTabPrivs.Location = new System.Drawing.Point(0, 345);
-            this.dgCheckTabPrivs.Name = "dgCheckTabPrivs";
-            this.dgCheckTabPrivs.RowHeadersWidth = 51;
-            this.dgCheckTabPrivs.RowTemplate.Height = 24;
-            this.dgCheckTabPrivs.Size = new System.Drawing.Size(1242, 241);
-            this.dgCheckTabPrivs.TabIndex = 2;
+            this.panel5.Controls.Add(this.btnCheckPrivs);
+            this.panel5.Controls.Add(this.comboBoxUser_Role);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1242, 113);
+            this.panel5.TabIndex = 0;
+            // 
+            // btnCheckPrivs
+            // 
+            this.btnCheckPrivs.Location = new System.Drawing.Point(956, 35);
+            this.btnCheckPrivs.Name = "btnCheckPrivs";
+            this.btnCheckPrivs.Size = new System.Drawing.Size(136, 42);
+            this.btnCheckPrivs.TabIndex = 11;
+            this.btnCheckPrivs.Text = "Kiểm tra";
+            this.btnCheckPrivs.UseVisualStyleBackColor = true;
+            this.btnCheckPrivs.Click += new System.EventHandler(this.btnCheckPrivs_Click);
+            // 
+            // comboBoxUser_Role
+            // 
+            this.comboBoxUser_Role.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxUser_Role.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxUser_Role.FormattingEnabled = true;
+            this.comboBoxUser_Role.Location = new System.Drawing.Point(439, 39);
+            this.comboBoxUser_Role.Name = "comboBoxUser_Role";
+            this.comboBoxUser_Role.Size = new System.Drawing.Size(446, 37);
+            this.comboBoxUser_Role.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(82, 42);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(329, 29);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Chọn user/role muốn kiểm tra";
+            // 
+            // tabEditPrivs
+            // 
+            this.tabEditPrivs.Controls.Add(this.panel7);
+            this.tabEditPrivs.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabEditPrivs.Location = new System.Drawing.Point(4, 38);
+            this.tabEditPrivs.Name = "tabEditPrivs";
+            this.tabEditPrivs.Size = new System.Drawing.Size(1242, 586);
+            this.tabEditPrivs.TabIndex = 3;
+            this.tabEditPrivs.Text = "Chỉnh sửa quyền";
+            this.tabEditPrivs.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.panelRevokeTab);
+            this.panel6.Controls.Add(this.panelRevokeSys);
+            this.panel6.Controls.Add(this.panel9);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1236, 580);
+            this.panel6.TabIndex = 0;
+            // 
+            // panelRevokeTab
+            // 
+            this.panelRevokeTab.Controls.Add(this.cbbObjTab_Revoke);
+            this.panelRevokeTab.Controls.Add(this.label8);
+            this.panelRevokeTab.Controls.Add(this.btnRevokeTab);
+            this.panelRevokeTab.Controls.Add(this.label9);
+            this.panelRevokeTab.Controls.Add(this.cbbPrivsTab_Revoke);
+            this.panelRevokeTab.Controls.Add(this.cbbSubjectTab_Revoke);
+            this.panelRevokeTab.Controls.Add(this.label10);
+            this.panelRevokeTab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelRevokeTab.Location = new System.Drawing.Point(617, 108);
+            this.panelRevokeTab.Name = "panelRevokeTab";
+            this.panelRevokeTab.Size = new System.Drawing.Size(619, 472);
+            this.panelRevokeTab.TabIndex = 10;
+            // 
+            // cbbObjTab_Revoke
+            // 
+            this.cbbObjTab_Revoke.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbObjTab_Revoke.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbObjTab_Revoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbObjTab_Revoke.FormattingEnabled = true;
+            this.cbbObjTab_Revoke.Location = new System.Drawing.Point(123, 108);
+            this.cbbObjTab_Revoke.Name = "cbbObjTab_Revoke";
+            this.cbbObjTab_Revoke.Size = new System.Drawing.Size(474, 33);
+            this.cbbObjTab_Revoke.TabIndex = 13;
+            this.cbbObjTab_Revoke.SelectedIndexChanged += new System.EventHandler(this.cbbObjTab_Revoke_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(16, 111);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(95, 25);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Đối tượng";
+            // 
+            // btnRevokeTab
+            // 
+            this.btnRevokeTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRevokeTab.Location = new System.Drawing.Point(231, 288);
+            this.btnRevokeTab.Name = "btnRevokeTab";
+            this.btnRevokeTab.Size = new System.Drawing.Size(138, 37);
+            this.btnRevokeTab.TabIndex = 11;
+            this.btnRevokeTab.Text = "Thu hồi";
+            this.btnRevokeTab.UseVisualStyleBackColor = true;
+            this.btnRevokeTab.Click += new System.EventHandler(this.btnRevokeTab_Click);
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(16, 192);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(101, 53);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Quyền (Privilege)";
+            // 
+            // cbbPrivsTab_Revoke
+            // 
+            this.cbbPrivsTab_Revoke.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbPrivsTab_Revoke.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbPrivsTab_Revoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbPrivsTab_Revoke.FormattingEnabled = true;
+            this.cbbPrivsTab_Revoke.Location = new System.Drawing.Point(123, 192);
+            this.cbbPrivsTab_Revoke.Name = "cbbPrivsTab_Revoke";
+            this.cbbPrivsTab_Revoke.Size = new System.Drawing.Size(474, 33);
+            this.cbbPrivsTab_Revoke.TabIndex = 7;
+            // 
+            // cbbSubjectTab_Revoke
+            // 
+            this.cbbSubjectTab_Revoke.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbSubjectTab_Revoke.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbSubjectTab_Revoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSubjectTab_Revoke.FormattingEnabled = true;
+            this.cbbSubjectTab_Revoke.Location = new System.Drawing.Point(123, 26);
+            this.cbbSubjectTab_Revoke.Name = "cbbSubjectTab_Revoke";
+            this.cbbSubjectTab_Revoke.Size = new System.Drawing.Size(474, 33);
+            this.cbbSubjectTab_Revoke.TabIndex = 9;
+            this.cbbSubjectTab_Revoke.SelectedIndexChanged += new System.EventHandler(this.cbbSubjectTab_Revoke_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(16, 29);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 25);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "User/role";
+            // 
+            // panelRevokeSys
+            // 
+            this.panelRevokeSys.Controls.Add(this.btnRevokeSys);
+            this.panelRevokeSys.Controls.Add(this.cbbSubjectSys_Revoke);
+            this.panelRevokeSys.Controls.Add(this.label11);
+            this.panelRevokeSys.Controls.Add(this.cbbPrivsSys_Revoke);
+            this.panelRevokeSys.Controls.Add(this.label12);
+            this.panelRevokeSys.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelRevokeSys.Location = new System.Drawing.Point(0, 108);
+            this.panelRevokeSys.Name = "panelRevokeSys";
+            this.panelRevokeSys.Size = new System.Drawing.Size(617, 472);
+            this.panelRevokeSys.TabIndex = 9;
+            // 
+            // btnRevokeSys
+            // 
+            this.btnRevokeSys.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRevokeSys.Location = new System.Drawing.Point(243, 288);
+            this.btnRevokeSys.Name = "btnRevokeSys";
+            this.btnRevokeSys.Size = new System.Drawing.Size(138, 37);
+            this.btnRevokeSys.TabIndex = 5;
+            this.btnRevokeSys.Text = "Thu hồi";
+            this.btnRevokeSys.UseVisualStyleBackColor = true;
+            this.btnRevokeSys.Click += new System.EventHandler(this.btnRevokeSys_Click);
+            // 
+            // cbbSubjectSys_Revoke
+            // 
+            this.cbbSubjectSys_Revoke.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbSubjectSys_Revoke.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbSubjectSys_Revoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSubjectSys_Revoke.FormattingEnabled = true;
+            this.cbbSubjectSys_Revoke.Location = new System.Drawing.Point(118, 26);
+            this.cbbSubjectSys_Revoke.Name = "cbbSubjectSys_Revoke";
+            this.cbbSubjectSys_Revoke.Size = new System.Drawing.Size(474, 33);
+            this.cbbSubjectSys_Revoke.TabIndex = 3;
+            this.cbbSubjectSys_Revoke.SelectedIndexChanged += new System.EventHandler(this.cbbSubjectSys_Revoke_SelectedIndexChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(12, 29);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(91, 25);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "User/role";
+            // 
+            // cbbPrivsSys_Revoke
+            // 
+            this.cbbPrivsSys_Revoke.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbPrivsSys_Revoke.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbPrivsSys_Revoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbPrivsSys_Revoke.FormattingEnabled = true;
+            this.cbbPrivsSys_Revoke.Location = new System.Drawing.Point(118, 141);
+            this.cbbPrivsSys_Revoke.Name = "cbbPrivsSys_Revoke";
+            this.cbbPrivsSys_Revoke.Size = new System.Drawing.Size(474, 33);
+            this.cbbPrivsSys_Revoke.TabIndex = 1;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(12, 141);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(100, 57);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Quyền (Privilege)";
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.radioBtnRevokeSys);
+            this.panel9.Controls.Add(this.radioBtnRevokeTab);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1236, 108);
+            this.panel9.TabIndex = 8;
+            // 
+            // radioBtnRevokeSys
+            // 
+            this.radioBtnRevokeSys.AutoSize = true;
+            this.radioBtnRevokeSys.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnRevokeSys.Location = new System.Drawing.Point(206, 36);
+            this.radioBtnRevokeSys.Name = "radioBtnRevokeSys";
+            this.radioBtnRevokeSys.Size = new System.Drawing.Size(203, 33);
+            this.radioBtnRevokeSys.TabIndex = 0;
+            this.radioBtnRevokeSys.TabStop = true;
+            this.radioBtnRevokeSys.Text = "Quyền hệ thống";
+            this.radioBtnRevokeSys.UseVisualStyleBackColor = true;
+            this.radioBtnRevokeSys.CheckedChanged += new System.EventHandler(this.radioBtnRevokeSys_CheckedChanged);
+            // 
+            // radioBtnRevokeTab
+            // 
+            this.radioBtnRevokeTab.AutoSize = true;
+            this.radioBtnRevokeTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnRevokeTab.Location = new System.Drawing.Point(809, 36);
+            this.radioBtnRevokeTab.Name = "radioBtnRevokeTab";
+            this.radioBtnRevokeTab.Size = new System.Drawing.Size(210, 33);
+            this.radioBtnRevokeTab.TabIndex = 1;
+            this.radioBtnRevokeTab.TabStop = true;
+            this.radioBtnRevokeTab.Text = "Quyền đối tượng";
+            this.radioBtnRevokeTab.UseVisualStyleBackColor = true;
+            this.radioBtnRevokeTab.CheckedChanged += new System.EventHandler(this.radioBtnRevokeTab_CheckedChanged);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.cbbPrivs_Edit);
+            this.panel7.Controls.Add(this.label16);
+            this.panel7.Controls.Add(this.btnEditPrivs);
+            this.panel7.Controls.Add(this.ckbWGO_Edit);
+            this.panel7.Controls.Add(this.cbbObj_Edit);
+            this.panel7.Controls.Add(this.label15);
+            this.panel7.Controls.Add(this.cbbSubject_Edit);
+            this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.cbbCMD_Edit);
+            this.panel7.Controls.Add(this.label13);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1242, 586);
+            this.panel7.TabIndex = 0;
+            // 
+            // cbbCMD_Edit
+            // 
+            this.cbbCMD_Edit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbCMD_Edit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbCMD_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCMD_Edit.FormattingEnabled = true;
+            this.cbbCMD_Edit.Items.AddRange(new object[] {
+            "GRANT",
+            "REVOKE"});
+            this.cbbCMD_Edit.Location = new System.Drawing.Point(510, 105);
+            this.cbbCMD_Edit.Name = "cbbCMD_Edit";
+            this.cbbCMD_Edit.Size = new System.Drawing.Size(474, 33);
+            this.cbbCMD_Edit.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(273, 108);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(138, 25);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Loại chỉnh sửa";
+            // 
+            // cbbSubject_Edit
+            // 
+            this.cbbSubject_Edit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbSubject_Edit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbSubject_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSubject_Edit.FormattingEnabled = true;
+            this.cbbSubject_Edit.Location = new System.Drawing.Point(510, 30);
+            this.cbbSubject_Edit.Name = "cbbSubject_Edit";
+            this.cbbSubject_Edit.Size = new System.Drawing.Size(474, 33);
+            this.cbbSubject_Edit.TabIndex = 7;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(273, 33);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(98, 25);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "User/Role";
+            // 
+            // cbbObj_Edit
+            // 
+            this.cbbObj_Edit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbObj_Edit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbObj_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbObj_Edit.FormattingEnabled = true;
+            this.cbbObj_Edit.Location = new System.Drawing.Point(510, 264);
+            this.cbbObj_Edit.Name = "cbbObj_Edit";
+            this.cbbObj_Edit.Size = new System.Drawing.Size(474, 33);
+            this.cbbObj_Edit.TabIndex = 9;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(273, 267);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(95, 25);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "Đối tượng";
+            // 
+            // ckbWGO_Edit
+            // 
+            this.ckbWGO_Edit.AutoSize = true;
+            this.ckbWGO_Edit.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ckbWGO_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbWGO_Edit.Location = new System.Drawing.Point(278, 349);
+            this.ckbWGO_Edit.Name = "ckbWGO_Edit";
+            this.ckbWGO_Edit.Size = new System.Drawing.Size(181, 29);
+            this.ckbWGO_Edit.TabIndex = 12;
+            this.ckbWGO_Edit.Text = "With grant option";
+            this.ckbWGO_Edit.UseVisualStyleBackColor = true;
+            // 
+            // btnEditPrivs
+            // 
+            this.btnEditPrivs.Location = new System.Drawing.Point(546, 427);
+            this.btnEditPrivs.Name = "btnEditPrivs";
+            this.btnEditPrivs.Size = new System.Drawing.Size(163, 42);
+            this.btnEditPrivs.TabIndex = 13;
+            this.btnEditPrivs.Text = "Chỉnh sửa";
+            this.btnEditPrivs.UseVisualStyleBackColor = true;
+            this.btnEditPrivs.Click += new System.EventHandler(this.btnEditPrivs_Click);
+            // 
+            // cbbPrivs_Edit
+            // 
+            this.cbbPrivs_Edit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbPrivs_Edit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbPrivs_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbPrivs_Edit.FormattingEnabled = true;
+            this.cbbPrivs_Edit.Items.AddRange(new object[] {
+            "SELECT",
+            "UPDATE",
+            "INSERT",
+            "DELETE",
+            "EXEC"});
+            this.cbbPrivs_Edit.Location = new System.Drawing.Point(510, 186);
+            this.cbbPrivs_Edit.Name = "cbbPrivs_Edit";
+            this.cbbPrivs_Edit.Size = new System.Drawing.Size(474, 33);
+            this.cbbPrivs_Edit.TabIndex = 15;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(273, 189);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 25);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "Quyền";
             // 
             // Form_Privs
             // 
@@ -542,12 +916,23 @@
             this.panelSys.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.tabRevoke.ResumeLayout(false);
             this.tabCheckPrivs.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgCheckTabPrivs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCheckSysPrivs)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCheckSysPrivs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCheckTabPrivs)).EndInit();
+            this.tabEditPrivs.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panelRevokeTab.ResumeLayout(false);
+            this.panelRevokeTab.PerformLayout();
+            this.panelRevokeSys.ResumeLayout(false);
+            this.panelRevokeSys.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -593,5 +978,34 @@
         private System.Windows.Forms.Button btnCheckPrivs;
         private System.Windows.Forms.DataGridView dgCheckSysPrivs;
         private System.Windows.Forms.DataGridView dgCheckTabPrivs;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panelRevokeTab;
+        private System.Windows.Forms.ComboBox cbbObjTab_Revoke;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnRevokeTab;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cbbPrivsTab_Revoke;
+        private System.Windows.Forms.ComboBox cbbSubjectTab_Revoke;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panelRevokeSys;
+        private System.Windows.Forms.Button btnRevokeSys;
+        private System.Windows.Forms.ComboBox cbbSubjectSys_Revoke;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbbPrivsSys_Revoke;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.RadioButton radioBtnRevokeSys;
+        private System.Windows.Forms.RadioButton radioBtnRevokeTab;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ComboBox cbbCMD_Edit;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cbbSubject_Edit;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cbbObj_Edit;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.CheckBox ckbWGO_Edit;
+        private System.Windows.Forms.Button btnEditPrivs;
+        private System.Windows.Forms.ComboBox cbbPrivs_Edit;
+        private System.Windows.Forms.Label label16;
     }
 }
