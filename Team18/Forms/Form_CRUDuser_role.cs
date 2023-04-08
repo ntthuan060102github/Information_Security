@@ -17,6 +17,22 @@ namespace Team18.Forms
         public Form_CRUDuser_role()
         {
             InitializeComponent();
+            DataTable dt = new DataTable();
+
+            DBOracleUtils.ExecProc_OutputDataTable("SP_VIEW_USER_ROLE", ref dt);
+            
+            foreach(DataRow row in dt.Rows)
+            {
+                this.comboBox1.Items.Add(row["USERTYPE"] + " - " + row["USERNAME"]);
+            }
+
+            DBOracleUtils.ExecProc_OutputDataTable("SP_VIEW_LIST_USER", ref dt);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                this.comboBox2.Items.Add(row["USERNAME"]);
+            }
+            this.radioButton1.Checked = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -123,6 +139,72 @@ namespace Team18.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (this.comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show(
+                    "Please select the user or role to delete",
+                    "",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            string[] input = this.comboBox1.Text.Replace(" - ", "#").Split('#');
+            DBOracleParameters parameters = new DBOracleParameters();
+            parameters.Add(new OracleParameter("I_USERTYPE", OracleDbType.Varchar2), input[0]);
+            parameters.Add(new OracleParameter("I_USERNAME", OracleDbType.Varchar2), input[1]);
+
+            DBOracleUtils.ExecProc("SP_DROP_USER", ref parameters);
+            MessageBox.Show(
+                    "Success",
+                    "Success",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (this.comboBox2.SelectedIndex == -1)
+            {
+                MessageBox.Show(
+                    "Please select the user to lock or unlock",
+                    "",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }   
+            string username = this.comboBox2.Text;
+            string action_type = this.radioButton1.Checked ? "LOCK" : "UNLOCK";
+
+            DBOracleParameters parameters = new DBOracleParameters();
+            parameters.Add(new OracleParameter("ACTION_TYPE", OracleDbType.Varchar2), action_type);
+            parameters.Add(new OracleParameter("USERNAME", OracleDbType.Varchar2), username);
+
+            DBOracleUtils.ExecProc("SP_LOCK_UNLOCK_USER", ref parameters);
+            MessageBox.Show(
+                    "Success",
+                    "Success",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
 
         }
     }

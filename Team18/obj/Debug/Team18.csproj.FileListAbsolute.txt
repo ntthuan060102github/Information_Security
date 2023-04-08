@@ -62,12 +62,8 @@ C:\Users\84962\source\repos\Information_Security\Team18\bin\Debug\System.ValueTu
 C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.csproj.AssemblyReference.cache
 C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.DBA_Home.resources
 C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.DBA_Login.resources
-C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.Forms.Form_CheckPrivs.resources
 C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.Forms.Form_CRUDuser_role.resources
-C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.Forms.Form_EditPrivs.resources
-C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.Forms.Form_GrantPrivs.resources
 C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.Forms.Form_ListUser.resources
-C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.Forms.Form_RevokePrivs.resources
 C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.Forms.Form_ViewPrivs.resources
 C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.Properties.Resources.resources
 C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.csproj.GenerateResource.cache
@@ -110,3 +106,4 @@ D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.cspr
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.exe
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.pdb
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_Privs.resources
+C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.Forms.Form_Privs.resources
