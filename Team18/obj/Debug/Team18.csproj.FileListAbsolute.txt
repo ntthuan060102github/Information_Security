@@ -100,12 +100,8 @@ D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.cspr
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.csproj.SuggestedBindingRedirects.cache
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.DBA_Home.resources
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.DBA_Login.resources
-D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_CheckPrivs.resources
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_CRUDuser_role.resources
-D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_EditPrivs.resources
-D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_GrantPrivs.resources
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_ListUser.resources
-D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_RevokePrivs.resources
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_ViewPrivs.resources
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Properties.Resources.resources
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.csproj.GenerateResource.cache
@@ -113,3 +109,4 @@ D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.cspr
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.csproj.CopyComplete
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.exe
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.pdb
+D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_Privs.resources

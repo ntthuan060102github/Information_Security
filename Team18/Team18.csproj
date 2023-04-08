@@ -93,41 +93,23 @@
     </Compile>
     <Compile Include="DBOracleUtils.cs" />
     <Compile Include="DBUtils.cs" />
-    <Compile Include="Forms\Form_CheckPrivs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form_CheckPrivs.Designer.cs">
-      <DependentUpon>Form_CheckPrivs.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Form_CRUDuser_role.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Form_CRUDuser_role.Designer.cs">
       <DependentUpon>Form_CRUDuser_role.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_EditPrivs.cs">
+    <Compile Include="Forms\Form_Privs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_EditPrivs.Designer.cs">
-      <DependentUpon>Form_EditPrivs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Form_GrantPrivs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form_GrantPrivs.Designer.cs">
-      <DependentUpon>Form_GrantPrivs.cs</DependentUpon>
+    <Compile Include="Forms\Form_Privs.Designer.cs">
+      <DependentUpon>Form_Privs.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_ListUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Form_ListUser.Designer.cs">
       <DependentUpon>Form_ListUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Form_RevokePrivs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form_RevokePrivs.Designer.cs">
-      <DependentUpon>Form_RevokePrivs.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_ViewPrivs.cs">
       <SubType>Form</SubType>
@@ -145,23 +127,14 @@
     <EmbeddedResource Include="DBA_Login.resx">
       <DependentUpon>DBA_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_CheckPrivs.resx">
-      <DependentUpon>Form_CheckPrivs.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_CRUDuser_role.resx">
       <DependentUpon>Form_CRUDuser_role.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_EditPrivs.resx">
-      <DependentUpon>Form_EditPrivs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_GrantPrivs.resx">
-      <DependentUpon>Form_GrantPrivs.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Privs.resx">
+      <DependentUpon>Form_Privs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_ListUser.resx">
       <DependentUpon>Form_ListUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_RevokePrivs.resx">
-      <DependentUpon>Form_RevokePrivs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_ViewPrivs.resx">
       <DependentUpon>Form_ViewPrivs.cs</DependentUpon>

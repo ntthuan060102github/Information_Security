@@ -86,6 +86,7 @@ namespace Team18
             childForm.BringToFront();
             childForm.Show();
             labelTitle.Text = childForm.Text;
+                
         }
 
         private void btnListUser_Click(object sender, EventArgs e)
@@ -103,29 +104,9 @@ namespace Team18
             OpenChildForm(new Forms.Form_CRUDuser_role(), sender);
         }
 
-        private void btnGrantPrivs_Click(object sender, EventArgs e)
+        private void btnPrivs_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Form_GrantPrivs(), sender);
-        }
-
-        private void btnRevokePrivs_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.Form_RevokePrivs(), sender);
-        }
-
-        private void btnCheckPrivs_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.Form_CheckPrivs(), sender);
-        }
-
-        private void btnEditPrivs_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.Form_EditPrivs(), sender);
-        }
-
-        private void panelChildForm_Paint(object sender, PaintEventArgs e)
-        {
-
+            OpenChildForm(new Forms.Form_Privs(), sender);
         }
     }
 }

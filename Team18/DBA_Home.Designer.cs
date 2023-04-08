@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnEditPrivs = new System.Windows.Forms.Button();
-            this.btnCheckPrivs = new System.Windows.Forms.Button();
-            this.btnRevokePrivs = new System.Windows.Forms.Button();
-            this.btnGrantPrivs = new System.Windows.Forms.Button();
+            this.btnPrivs = new System.Windows.Forms.Button();
             this.btnCRUDuser_role = new System.Windows.Forms.Button();
             this.btnViewPrivs = new System.Windows.Forms.Button();
             this.btnListUser = new System.Windows.Forms.Button();
@@ -51,10 +48,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.btnEditPrivs);
-            this.panelMenu.Controls.Add(this.btnCheckPrivs);
-            this.panelMenu.Controls.Add(this.btnRevokePrivs);
-            this.panelMenu.Controls.Add(this.btnGrantPrivs);
+            this.panelMenu.Controls.Add(this.btnPrivs);
             this.panelMenu.Controls.Add(this.btnCRUDuser_role);
             this.panelMenu.Controls.Add(this.btnViewPrivs);
             this.panelMenu.Controls.Add(this.btnListUser);
@@ -65,77 +59,23 @@
             this.panelMenu.Size = new System.Drawing.Size(214, 753);
             this.panelMenu.TabIndex = 0;
             // 
-            // btnEditPrivs
+            // btnPrivs
             // 
-            this.btnEditPrivs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEditPrivs.FlatAppearance.BorderSize = 0;
-            this.btnEditPrivs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditPrivs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditPrivs.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEditPrivs.Location = new System.Drawing.Point(0, 357);
-            this.btnEditPrivs.Name = "btnEditPrivs";
-            this.btnEditPrivs.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btnEditPrivs.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnEditPrivs.Size = new System.Drawing.Size(214, 44);
-            this.btnEditPrivs.TabIndex = 7;
-            this.btnEditPrivs.Text = "Chỉnh sửa quyền";
-            this.btnEditPrivs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditPrivs.UseVisualStyleBackColor = true;
-            this.btnEditPrivs.Click += new System.EventHandler(this.btnEditPrivs_Click);
-            // 
-            // btnCheckPrivs
-            // 
-            this.btnCheckPrivs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCheckPrivs.FlatAppearance.BorderSize = 0;
-            this.btnCheckPrivs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckPrivs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckPrivs.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCheckPrivs.Location = new System.Drawing.Point(0, 313);
-            this.btnCheckPrivs.Name = "btnCheckPrivs";
-            this.btnCheckPrivs.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btnCheckPrivs.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnCheckPrivs.Size = new System.Drawing.Size(214, 44);
-            this.btnCheckPrivs.TabIndex = 6;
-            this.btnCheckPrivs.Text = "Kiểm tra quyền";
-            this.btnCheckPrivs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCheckPrivs.UseVisualStyleBackColor = true;
-            this.btnCheckPrivs.Click += new System.EventHandler(this.btnCheckPrivs_Click);
-            // 
-            // btnRevokePrivs
-            // 
-            this.btnRevokePrivs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRevokePrivs.FlatAppearance.BorderSize = 0;
-            this.btnRevokePrivs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRevokePrivs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRevokePrivs.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRevokePrivs.Location = new System.Drawing.Point(0, 269);
-            this.btnRevokePrivs.Name = "btnRevokePrivs";
-            this.btnRevokePrivs.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btnRevokePrivs.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnRevokePrivs.Size = new System.Drawing.Size(214, 44);
-            this.btnRevokePrivs.TabIndex = 5;
-            this.btnRevokePrivs.Text = "Thu hồi quyền";
-            this.btnRevokePrivs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRevokePrivs.UseVisualStyleBackColor = true;
-            this.btnRevokePrivs.Click += new System.EventHandler(this.btnRevokePrivs_Click);
-            // 
-            // btnGrantPrivs
-            // 
-            this.btnGrantPrivs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGrantPrivs.FlatAppearance.BorderSize = 0;
-            this.btnGrantPrivs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrantPrivs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrantPrivs.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnGrantPrivs.Location = new System.Drawing.Point(0, 225);
-            this.btnGrantPrivs.Name = "btnGrantPrivs";
-            this.btnGrantPrivs.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btnGrantPrivs.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnGrantPrivs.Size = new System.Drawing.Size(214, 44);
-            this.btnGrantPrivs.TabIndex = 4;
-            this.btnGrantPrivs.Text = "Cấp quyền";
-            this.btnGrantPrivs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrantPrivs.UseVisualStyleBackColor = true;
-            this.btnGrantPrivs.Click += new System.EventHandler(this.btnGrantPrivs_Click);
+            this.btnPrivs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPrivs.FlatAppearance.BorderSize = 0;
+            this.btnPrivs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrivs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrivs.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPrivs.Location = new System.Drawing.Point(0, 225);
+            this.btnPrivs.Name = "btnPrivs";
+            this.btnPrivs.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnPrivs.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnPrivs.Size = new System.Drawing.Size(214, 44);
+            this.btnPrivs.TabIndex = 4;
+            this.btnPrivs.Text = "Phân quyền";
+            this.btnPrivs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrivs.UseVisualStyleBackColor = true;
+            this.btnPrivs.Click += new System.EventHandler(this.btnPrivs_Click);
             // 
             // btnCRUDuser_role
             // 
@@ -203,6 +143,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -224,31 +167,37 @@
             // 
             // labelTitle
             // 
+            this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelTitle.Location = new System.Drawing.Point(610, 18);
+            this.labelTitle.Location = new System.Drawing.Point(559, 22);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(90, 32);
+            this.labelTitle.Size = new System.Drawing.Size(89, 32);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Home";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelChildForm
             // 
+            this.panelChildForm.AutoScroll = true;
+            this.panelChildForm.AutoSize = true;
             this.panelChildForm.Controls.Add(this.label1);
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(214, 78);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1268, 675);
             this.panelChildForm.TabIndex = 2;
-            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(330, 199);
+            this.label1.Location = new System.Drawing.Point(311, 336);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(613, 36);
             this.label1.TabIndex = 0;
@@ -273,6 +222,7 @@
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -281,10 +231,7 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button btnListUser;
-        private System.Windows.Forms.Button btnEditPrivs;
-        private System.Windows.Forms.Button btnCheckPrivs;
-        private System.Windows.Forms.Button btnRevokePrivs;
-        private System.Windows.Forms.Button btnGrantPrivs;
+        private System.Windows.Forms.Button btnPrivs;
         private System.Windows.Forms.Button btnCRUDuser_role;
         private System.Windows.Forms.Button btnViewPrivs;
         private System.Windows.Forms.Panel panelTitleBar;
