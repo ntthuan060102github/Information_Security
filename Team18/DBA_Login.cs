@@ -31,20 +31,34 @@ namespace Team18
                 MessageBox.Show("Vui lòng nhập Username","Error");
             }
             else
-            {
+            {    
                 try
                 {
-                    OracleDB.connectToOracle("ATBM_QLNV", "team18");
-                    /*MessageBox.Show("Đăng nhập thành công!");*/
-                    DBA_Home home = new DBA_Home();
-                    this.Hide();
-                    home.ShowDialog();
-                    this.Close();
+                    OracleDB.connectToOracle(username, password);
+                    try
+                    {
+
+                        OracleCommand cmd = OracleDB.conn.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "SELECT * FROM dba_role_privs " +
+                            "WHERE GRANTEE = USER AND GRANTED_ROLE = 'DBA'";
+                        string user = cmd.ExecuteScalar().ToString();
+                        MessageBox.Show("Đăng nhập thành công!");
+                        DBA_Home home = new DBA_Home();
+                        this.Hide();
+                        home.ShowDialog();
+                        this.Show();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("User không có quyền quản trị (DBA)");
+                    }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
                 }
+                
             }
         }
 
