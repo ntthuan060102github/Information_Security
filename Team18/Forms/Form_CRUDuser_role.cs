@@ -139,7 +139,43 @@ namespace Team18.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string username = this.textBox1.Text;
+                string password = this.textBox2.Text;
 
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                {
+                    MessageBox.Show(
+                        "Invalid username or password!",
+                        "Warning",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                    return;
+                }
+
+                DBOracleParameters parameters = new DBOracleParameters();
+                parameters.Add(new OracleParameter("I_USERNAME", OracleDbType.Varchar2), username);
+                parameters.Add(new OracleParameter("I_PASSWORD", OracleDbType.Varchar2), password);
+
+                var save = DBOracleUtils.ExecProc("SP_MODIFY_PASSWORD", ref parameters);
+                MessageBox.Show(
+                    "Success!",
+                    "",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+            }
+            catch
+            {
+                MessageBox.Show(
+                    "Username already exists!",
+                    "",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
