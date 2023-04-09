@@ -305,6 +305,32 @@ namespace Team18.Forms
             }
         }
 
+        private void comboBoxObjTab_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxObjTab.SelectedItem != null)
+            {
+                comboBoxPrivsTab.Items.Clear();
+                comboBoxPrivsTab.Text = "";
+                try
+                {
+                    OracleCommand cmd = OracleDB.conn.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "SELECT DISTINCT PRIVILEGE FROM ALL_TAB_PRIVS WHERE TYPE IN (SELECT OBJECT_TYPE FROM DBA_OBJECTS WHERE OBJECT_NAME = :obj)";
+                    cmd.Parameters.Add(new OracleParameter("obj", comboBoxObjTab.SelectedItem.ToString()));
+                    OracleDataReader r4 = cmd.ExecuteReader();
+                    while (r4.Read())
+                    {
+                        comboBoxPrivsTab.Items.Add(r4.GetString(0));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            
+        }
+
         private void radioBtnTab_CheckedChanged(object sender, EventArgs e)
         {
             if (this.radioBtnTab.Checked == true)
@@ -661,5 +687,7 @@ namespace Team18.Forms
                 }
             }
         }
+
+        
     }
 }

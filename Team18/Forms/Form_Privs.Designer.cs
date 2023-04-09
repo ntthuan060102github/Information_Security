@@ -58,15 +58,6 @@
             this.radioBtnSys = new System.Windows.Forms.RadioButton();
             this.radioBtnTab = new System.Windows.Forms.RadioButton();
             this.tabRevoke = new System.Windows.Forms.TabPage();
-            this.tabCheckPrivs = new System.Windows.Forms.TabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dgCheckTabPrivs = new System.Windows.Forms.DataGridView();
-            this.dgCheckSysPrivs = new System.Windows.Forms.DataGridView();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnCheckPrivs = new System.Windows.Forms.Button();
-            this.comboBoxUser_Role = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tabEditPrivs = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panelRevokeTab = new System.Windows.Forms.Panel();
             this.cbbObjTab_Revoke = new System.Windows.Forms.ComboBox();
@@ -85,17 +76,26 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.radioBtnRevokeSys = new System.Windows.Forms.RadioButton();
             this.radioBtnRevokeTab = new System.Windows.Forms.RadioButton();
+            this.tabCheckPrivs = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dgCheckTabPrivs = new System.Windows.Forms.DataGridView();
+            this.dgCheckSysPrivs = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnCheckPrivs = new System.Windows.Forms.Button();
+            this.comboBoxUser_Role = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tabEditPrivs = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.cbbCMD_Edit = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cbbSubject_Edit = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.cbbObj_Edit = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.ckbWGO_Edit = new System.Windows.Forms.CheckBox();
-            this.btnEditPrivs = new System.Windows.Forms.Button();
             this.cbbPrivs_Edit = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.btnEditPrivs = new System.Windows.Forms.Button();
+            this.ckbWGO_Edit = new System.Windows.Forms.CheckBox();
+            this.cbbObj_Edit = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cbbSubject_Edit = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbbCMD_Edit = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabControlPrivs.SuspendLayout();
             this.tabGrant.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -104,16 +104,16 @@
             this.panelSys.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabRevoke.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panelRevokeTab.SuspendLayout();
+            this.panelRevokeSys.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.tabCheckPrivs.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCheckTabPrivs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgCheckSysPrivs)).BeginInit();
             this.panel5.SuspendLayout();
             this.tabEditPrivs.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panelRevokeTab.SuspendLayout();
-            this.panelRevokeSys.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -248,6 +248,7 @@
             this.comboBoxObjTab.Name = "comboBoxObjTab";
             this.comboBoxObjTab.Size = new System.Drawing.Size(292, 24);
             this.comboBoxObjTab.TabIndex = 13;
+            this.comboBoxObjTab.SelectedIndexChanged += new System.EventHandler(this.comboBoxObjTab_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -463,104 +464,6 @@
             this.tabRevoke.Text = "Thu hồi quyền";
             this.tabRevoke.UseVisualStyleBackColor = true;
             // 
-            // tabCheckPrivs
-            // 
-            this.tabCheckPrivs.Controls.Add(this.panel4);
-            this.tabCheckPrivs.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabCheckPrivs.Location = new System.Drawing.Point(4, 38);
-            this.tabCheckPrivs.Name = "tabCheckPrivs";
-            this.tabCheckPrivs.Size = new System.Drawing.Size(1242, 586);
-            this.tabCheckPrivs.TabIndex = 2;
-            this.tabCheckPrivs.Text = "Kiểm tra quyền";
-            this.tabCheckPrivs.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.AutoScroll = true;
-            this.panel4.Controls.Add(this.dgCheckTabPrivs);
-            this.panel4.Controls.Add(this.dgCheckSysPrivs);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1242, 586);
-            this.panel4.TabIndex = 0;
-            // 
-            // dgCheckTabPrivs
-            // 
-            this.dgCheckTabPrivs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgCheckTabPrivs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCheckTabPrivs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgCheckTabPrivs.Location = new System.Drawing.Point(0, 345);
-            this.dgCheckTabPrivs.Name = "dgCheckTabPrivs";
-            this.dgCheckTabPrivs.RowHeadersWidth = 51;
-            this.dgCheckTabPrivs.RowTemplate.Height = 24;
-            this.dgCheckTabPrivs.Size = new System.Drawing.Size(1242, 241);
-            this.dgCheckTabPrivs.TabIndex = 2;
-            // 
-            // dgCheckSysPrivs
-            // 
-            this.dgCheckSysPrivs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgCheckSysPrivs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCheckSysPrivs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgCheckSysPrivs.Location = new System.Drawing.Point(0, 113);
-            this.dgCheckSysPrivs.Name = "dgCheckSysPrivs";
-            this.dgCheckSysPrivs.RowHeadersWidth = 51;
-            this.dgCheckSysPrivs.RowTemplate.Height = 24;
-            this.dgCheckSysPrivs.Size = new System.Drawing.Size(1242, 232);
-            this.dgCheckSysPrivs.TabIndex = 1;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.btnCheckPrivs);
-            this.panel5.Controls.Add(this.comboBoxUser_Role);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1242, 113);
-            this.panel5.TabIndex = 0;
-            // 
-            // btnCheckPrivs
-            // 
-            this.btnCheckPrivs.Location = new System.Drawing.Point(956, 35);
-            this.btnCheckPrivs.Name = "btnCheckPrivs";
-            this.btnCheckPrivs.Size = new System.Drawing.Size(136, 42);
-            this.btnCheckPrivs.TabIndex = 11;
-            this.btnCheckPrivs.Text = "Kiểm tra";
-            this.btnCheckPrivs.UseVisualStyleBackColor = true;
-            this.btnCheckPrivs.Click += new System.EventHandler(this.btnCheckPrivs_Click);
-            // 
-            // comboBoxUser_Role
-            // 
-            this.comboBoxUser_Role.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxUser_Role.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxUser_Role.FormattingEnabled = true;
-            this.comboBoxUser_Role.Location = new System.Drawing.Point(439, 39);
-            this.comboBoxUser_Role.Name = "comboBoxUser_Role";
-            this.comboBoxUser_Role.Size = new System.Drawing.Size(446, 37);
-            this.comboBoxUser_Role.TabIndex = 10;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(82, 42);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(329, 29);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Chọn user/role muốn kiểm tra";
-            // 
-            // tabEditPrivs
-            // 
-            this.tabEditPrivs.Controls.Add(this.panel7);
-            this.tabEditPrivs.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabEditPrivs.Location = new System.Drawing.Point(4, 38);
-            this.tabEditPrivs.Name = "tabEditPrivs";
-            this.tabEditPrivs.Size = new System.Drawing.Size(1242, 586);
-            this.tabEditPrivs.TabIndex = 3;
-            this.tabEditPrivs.Text = "Chỉnh sửa quyền";
-            this.tabEditPrivs.UseVisualStyleBackColor = true;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.panelRevokeTab);
@@ -764,6 +667,104 @@
             this.radioBtnRevokeTab.UseVisualStyleBackColor = true;
             this.radioBtnRevokeTab.CheckedChanged += new System.EventHandler(this.radioBtnRevokeTab_CheckedChanged);
             // 
+            // tabCheckPrivs
+            // 
+            this.tabCheckPrivs.Controls.Add(this.panel4);
+            this.tabCheckPrivs.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabCheckPrivs.Location = new System.Drawing.Point(4, 38);
+            this.tabCheckPrivs.Name = "tabCheckPrivs";
+            this.tabCheckPrivs.Size = new System.Drawing.Size(1242, 586);
+            this.tabCheckPrivs.TabIndex = 2;
+            this.tabCheckPrivs.Text = "Kiểm tra quyền";
+            this.tabCheckPrivs.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.AutoScroll = true;
+            this.panel4.Controls.Add(this.dgCheckTabPrivs);
+            this.panel4.Controls.Add(this.dgCheckSysPrivs);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1242, 586);
+            this.panel4.TabIndex = 0;
+            // 
+            // dgCheckTabPrivs
+            // 
+            this.dgCheckTabPrivs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgCheckTabPrivs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCheckTabPrivs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgCheckTabPrivs.Location = new System.Drawing.Point(0, 345);
+            this.dgCheckTabPrivs.Name = "dgCheckTabPrivs";
+            this.dgCheckTabPrivs.RowHeadersWidth = 51;
+            this.dgCheckTabPrivs.RowTemplate.Height = 24;
+            this.dgCheckTabPrivs.Size = new System.Drawing.Size(1242, 241);
+            this.dgCheckTabPrivs.TabIndex = 2;
+            // 
+            // dgCheckSysPrivs
+            // 
+            this.dgCheckSysPrivs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgCheckSysPrivs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCheckSysPrivs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgCheckSysPrivs.Location = new System.Drawing.Point(0, 113);
+            this.dgCheckSysPrivs.Name = "dgCheckSysPrivs";
+            this.dgCheckSysPrivs.RowHeadersWidth = 51;
+            this.dgCheckSysPrivs.RowTemplate.Height = 24;
+            this.dgCheckSysPrivs.Size = new System.Drawing.Size(1242, 232);
+            this.dgCheckSysPrivs.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnCheckPrivs);
+            this.panel5.Controls.Add(this.comboBoxUser_Role);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1242, 113);
+            this.panel5.TabIndex = 0;
+            // 
+            // btnCheckPrivs
+            // 
+            this.btnCheckPrivs.Location = new System.Drawing.Point(956, 35);
+            this.btnCheckPrivs.Name = "btnCheckPrivs";
+            this.btnCheckPrivs.Size = new System.Drawing.Size(136, 42);
+            this.btnCheckPrivs.TabIndex = 11;
+            this.btnCheckPrivs.Text = "Kiểm tra";
+            this.btnCheckPrivs.UseVisualStyleBackColor = true;
+            this.btnCheckPrivs.Click += new System.EventHandler(this.btnCheckPrivs_Click);
+            // 
+            // comboBoxUser_Role
+            // 
+            this.comboBoxUser_Role.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxUser_Role.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxUser_Role.FormattingEnabled = true;
+            this.comboBoxUser_Role.Location = new System.Drawing.Point(439, 39);
+            this.comboBoxUser_Role.Name = "comboBoxUser_Role";
+            this.comboBoxUser_Role.Size = new System.Drawing.Size(446, 37);
+            this.comboBoxUser_Role.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(82, 42);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(329, 29);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Chọn user/role muốn kiểm tra";
+            // 
+            // tabEditPrivs
+            // 
+            this.tabEditPrivs.Controls.Add(this.panel7);
+            this.tabEditPrivs.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabEditPrivs.Location = new System.Drawing.Point(4, 38);
+            this.tabEditPrivs.Name = "tabEditPrivs";
+            this.tabEditPrivs.Size = new System.Drawing.Size(1242, 586);
+            this.tabEditPrivs.TabIndex = 3;
+            this.tabEditPrivs.Text = "Chỉnh sửa quyền";
+            this.tabEditPrivs.UseVisualStyleBackColor = true;
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.cbbPrivs_Edit);
@@ -781,94 +782,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1242, 586);
             this.panel7.TabIndex = 0;
-            // 
-            // cbbCMD_Edit
-            // 
-            this.cbbCMD_Edit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbbCMD_Edit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbbCMD_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCMD_Edit.FormattingEnabled = true;
-            this.cbbCMD_Edit.Items.AddRange(new object[] {
-            "GRANT",
-            "REVOKE"});
-            this.cbbCMD_Edit.Location = new System.Drawing.Point(510, 105);
-            this.cbbCMD_Edit.Name = "cbbCMD_Edit";
-            this.cbbCMD_Edit.Size = new System.Drawing.Size(474, 33);
-            this.cbbCMD_Edit.TabIndex = 5;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(273, 108);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(138, 25);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Loại chỉnh sửa";
-            // 
-            // cbbSubject_Edit
-            // 
-            this.cbbSubject_Edit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbbSubject_Edit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbbSubject_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbSubject_Edit.FormattingEnabled = true;
-            this.cbbSubject_Edit.Location = new System.Drawing.Point(510, 30);
-            this.cbbSubject_Edit.Name = "cbbSubject_Edit";
-            this.cbbSubject_Edit.Size = new System.Drawing.Size(474, 33);
-            this.cbbSubject_Edit.TabIndex = 7;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(273, 33);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 25);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "User/Role";
-            // 
-            // cbbObj_Edit
-            // 
-            this.cbbObj_Edit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbbObj_Edit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbbObj_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbObj_Edit.FormattingEnabled = true;
-            this.cbbObj_Edit.Location = new System.Drawing.Point(510, 264);
-            this.cbbObj_Edit.Name = "cbbObj_Edit";
-            this.cbbObj_Edit.Size = new System.Drawing.Size(474, 33);
-            this.cbbObj_Edit.TabIndex = 9;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(273, 267);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(95, 25);
-            this.label15.TabIndex = 8;
-            this.label15.Text = "Đối tượng";
-            // 
-            // ckbWGO_Edit
-            // 
-            this.ckbWGO_Edit.AutoSize = true;
-            this.ckbWGO_Edit.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ckbWGO_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbWGO_Edit.Location = new System.Drawing.Point(278, 349);
-            this.ckbWGO_Edit.Name = "ckbWGO_Edit";
-            this.ckbWGO_Edit.Size = new System.Drawing.Size(181, 29);
-            this.ckbWGO_Edit.TabIndex = 12;
-            this.ckbWGO_Edit.Text = "With grant option";
-            this.ckbWGO_Edit.UseVisualStyleBackColor = true;
-            // 
-            // btnEditPrivs
-            // 
-            this.btnEditPrivs.Location = new System.Drawing.Point(546, 427);
-            this.btnEditPrivs.Name = "btnEditPrivs";
-            this.btnEditPrivs.Size = new System.Drawing.Size(163, 42);
-            this.btnEditPrivs.TabIndex = 13;
-            this.btnEditPrivs.Text = "Chỉnh sửa";
-            this.btnEditPrivs.UseVisualStyleBackColor = true;
-            this.btnEditPrivs.Click += new System.EventHandler(this.btnEditPrivs_Click);
             // 
             // cbbPrivs_Edit
             // 
@@ -897,6 +810,94 @@
             this.label16.TabIndex = 14;
             this.label16.Text = "Quyền";
             // 
+            // btnEditPrivs
+            // 
+            this.btnEditPrivs.Location = new System.Drawing.Point(546, 427);
+            this.btnEditPrivs.Name = "btnEditPrivs";
+            this.btnEditPrivs.Size = new System.Drawing.Size(163, 42);
+            this.btnEditPrivs.TabIndex = 13;
+            this.btnEditPrivs.Text = "Chỉnh sửa";
+            this.btnEditPrivs.UseVisualStyleBackColor = true;
+            this.btnEditPrivs.Click += new System.EventHandler(this.btnEditPrivs_Click);
+            // 
+            // ckbWGO_Edit
+            // 
+            this.ckbWGO_Edit.AutoSize = true;
+            this.ckbWGO_Edit.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ckbWGO_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbWGO_Edit.Location = new System.Drawing.Point(278, 349);
+            this.ckbWGO_Edit.Name = "ckbWGO_Edit";
+            this.ckbWGO_Edit.Size = new System.Drawing.Size(181, 29);
+            this.ckbWGO_Edit.TabIndex = 12;
+            this.ckbWGO_Edit.Text = "With grant option";
+            this.ckbWGO_Edit.UseVisualStyleBackColor = true;
+            // 
+            // cbbObj_Edit
+            // 
+            this.cbbObj_Edit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbObj_Edit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbObj_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbObj_Edit.FormattingEnabled = true;
+            this.cbbObj_Edit.Location = new System.Drawing.Point(510, 264);
+            this.cbbObj_Edit.Name = "cbbObj_Edit";
+            this.cbbObj_Edit.Size = new System.Drawing.Size(474, 33);
+            this.cbbObj_Edit.TabIndex = 9;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(273, 267);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(95, 25);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "Đối tượng";
+            // 
+            // cbbSubject_Edit
+            // 
+            this.cbbSubject_Edit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbSubject_Edit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbSubject_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSubject_Edit.FormattingEnabled = true;
+            this.cbbSubject_Edit.Location = new System.Drawing.Point(510, 30);
+            this.cbbSubject_Edit.Name = "cbbSubject_Edit";
+            this.cbbSubject_Edit.Size = new System.Drawing.Size(474, 33);
+            this.cbbSubject_Edit.TabIndex = 7;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(273, 33);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(98, 25);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "User/Role";
+            // 
+            // cbbCMD_Edit
+            // 
+            this.cbbCMD_Edit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbCMD_Edit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbCMD_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCMD_Edit.FormattingEnabled = true;
+            this.cbbCMD_Edit.Items.AddRange(new object[] {
+            "GRANT",
+            "REVOKE"});
+            this.cbbCMD_Edit.Location = new System.Drawing.Point(510, 105);
+            this.cbbCMD_Edit.Name = "cbbCMD_Edit";
+            this.cbbCMD_Edit.Size = new System.Drawing.Size(474, 33);
+            this.cbbCMD_Edit.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(273, 108);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(138, 25);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Loại chỉnh sửa";
+            // 
             // Form_Privs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -917,13 +918,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabRevoke.ResumeLayout(false);
-            this.tabCheckPrivs.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgCheckTabPrivs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCheckSysPrivs)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.tabEditPrivs.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panelRevokeTab.ResumeLayout(false);
             this.panelRevokeTab.PerformLayout();
@@ -931,6 +925,13 @@
             this.panelRevokeSys.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.tabCheckPrivs.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgCheckTabPrivs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCheckSysPrivs)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.tabEditPrivs.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.ResumeLayout(false);
