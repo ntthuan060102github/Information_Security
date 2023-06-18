@@ -304,16 +304,6 @@ BEGIN
 END;
 /
 
-DECLARE
-    I_USER VARCHAR2(30);
-    I_ROLE VARCHAR2(30);
-BEGIN
-    I_USER := 'I_USER';
-    I_ROLE := 'I_ROLE';
-
-    SP_GRANT_ROLE_TO_USER(I_USER, I_ROLE);
-END;
- /   
  
 --FORM1----------------------------------------------------------------------------------------------------------------------------------------
 -- PROC#3: SP_CREATE_USER
@@ -375,14 +365,7 @@ BEGIN
 END;
 /
 
-DECLARE
-    I_ROLENAME VARCHAR2(30);
-BEGIN
-    I_ROLENAME := 'I_ROLENAME';
 
-    SP_CREATE_ROLE(I_ROLENAME);
-END;
-/
 --FORM1----------------------------------------------------------------------------------------------------------------------------------------
 -- PROC#5: SP_DROP_USER
 -- input:
