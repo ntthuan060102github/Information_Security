@@ -140,10 +140,6 @@ namespace Team18
                 if (isLogin)
                 {
                     string key = Encryption.GenerateKey();
-                    string result = Encryption.EncryptData("7000000", key);
-                    string result2 = Encryption.DecryptData(result, key);
-                    MessageBox.Show(result);
-                    MessageBox.Show(result2);
                 }
             }
         }
