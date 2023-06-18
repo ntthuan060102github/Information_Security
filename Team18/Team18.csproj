@@ -79,11 +79,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBA_Login.cs">
+    <Compile Include="BanGiamDoc_Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DBA_Login.Designer.cs">
-      <DependentUpon>DBA_Login.cs</DependentUpon>
+    <Compile Include="BanGiamDoc_Home.Designer.cs">
+      <DependentUpon>BanGiamDoc_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encryption.cs" />
+    <Compile Include="Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="DBA_Home.cs">
       <SubType>Form</SubType>
@@ -117,15 +124,51 @@
     <Compile Include="Forms\Form_ViewPrivs.Designer.cs">
       <DependentUpon>Form_ViewPrivs.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanSu_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu_Home.Designer.cs">
+      <DependentUpon>NhanSu_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien_Home.Designer.cs">
+      <DependentUpon>NhanVien_Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="OracleDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLTrucTiep_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLTrucTiep_Home.Designer.cs">
+      <DependentUpon>QLTrucTiep_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiChinh_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh_Home.Designer.cs">
+      <DependentUpon>TaiChinh_Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemeColor.cs" />
+    <Compile Include="TruongDeAn_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn_Home.Designer.cs">
+      <DependentUpon>TruongDeAn_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongPhong_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongPhong_Home.Designer.cs">
+      <DependentUpon>TruongPhong_Home.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DBA_Home.resx">
       <DependentUpon>DBA_Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DBA_Login.resx">
-      <DependentUpon>DBA_Login.cs</DependentUpon>
+    <EmbeddedResource Include="Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_CRUDuser_role.resx">
       <DependentUpon>Form_CRUDuser_role.cs</DependentUpon>
@@ -139,6 +182,12 @@
     <EmbeddedResource Include="Forms\Form_ViewPrivs.resx">
       <DependentUpon>Form_ViewPrivs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu_Home.resx">
+      <DependentUpon>NhanSu_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_Home.resx">
+      <DependentUpon>NhanVien_Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -148,6 +197,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QLTrucTiep_Home.resx">
+      <DependentUpon>QLTrucTiep_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiChinh_Home.resx">
+      <DependentUpon>TaiChinh_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn_Home.resx">
+      <DependentUpon>TruongDeAn_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongPhong_Home.resx">
+      <DependentUpon>TruongPhong_Home.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>

@@ -16,7 +16,7 @@ namespace Team18
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DBA_Login());
+            Application.Run(new Login_Form());
         }
     }
 }

@@ -107,3 +107,81 @@ D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.exe
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.pdb
 D:\CNTT KHTN-HCM\3st year\HK6\ATBM CSDL\Project\dev\Team18\obj\Debug\Team18.Forms.Form_Privs.resources
 C:\Users\84962\source\repos\Information_Security\Team18\obj\Debug\Team18.Forms.Form_Privs.resources
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\Team18.exe.config
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\Team18.exe
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\Team18.pdb
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Buffers.dll
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Memory.dll
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Numerics.Vectors.dll
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Text.Encodings.Web.dll
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Text.Json.dll
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.ValueTuple.dll
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Buffers.xml
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Memory.xml
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Numerics.Vectors.xml
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Text.Encodings.Web.xml
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Text.Json.xml
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.ValueTuple.xml
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.csproj.AssemblyReference.cache
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.csproj.SuggestedBindingRedirects.cache
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.DBA_Home.resources
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.DBA_Login.resources
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.Form_CRUDuser_role.resources
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.Form_Privs.resources
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.Form_ListUser.resources
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.Form_ViewPrivs.resources
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Properties.Resources.resources
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.csproj.GenerateResource.cache
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.csproj.CoreCompileInputs.cache
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.csproj.CopyComplete
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.exe
+D:\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.pdb
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\Team18.exe.config
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\Team18.exe
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\Team18.pdb
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Buffers.dll
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Memory.dll
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Numerics.Vectors.dll
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Text.Encodings.Web.dll
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Text.Json.dll
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.ValueTuple.dll
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Buffers.xml
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Memory.xml
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Numerics.Vectors.xml
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Text.Encodings.Web.xml
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Text.Json.xml
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\bin\Debug\System.ValueTuple.xml
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.csproj.AssemblyReference.cache
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.csproj.SuggestedBindingRedirects.cache
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.DBA_Home.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Login_Form.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.Form_CRUDuser_role.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.Form_Privs.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.Form_ListUser.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.Form_ViewPrivs.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Properties.Resources.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.csproj.GenerateResource.cache
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.csproj.CoreCompileInputs.cache
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.csproj.CopyComplete
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.exe
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.pdb
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.NhanSu_Home.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.NhanVien_Home.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.QLTrucTiep_Home.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.TaiChinh_Home.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.TruongDeAn_Home.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.TruongPhong_Home.resources
