@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
 
-namespace Tutorial.SqlConn
+namespace Team18.Database
 {
     class DBUtils
     {
@@ -36,7 +36,7 @@ namespace Tutorial.SqlConn
             int port = 1521;
             string sid = "xe";
 
-            return DBOracleUtils.GetDBConnection(host, port, sid, username, password);
+            return OracleDB.GetDBConnection(host, port, sid, username, password);
         }
 
         public static bool CheckSQLInput(string str)

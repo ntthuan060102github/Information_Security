@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Tutorial.SqlConn;
+using Team18.Database;
+using Team18.Encryption;
 
 namespace Team18.Forms
 {
@@ -17,7 +18,7 @@ namespace Team18.Forms
         {
             InitializeComponent();
             DataTable dt = new DataTable();
-            DBOracleUtils.ExecProc_OutputDataTable("SP_VIEW_LIST_PRIVILEGE", ref dt);
+            OracleDB.ExecProc_OutputDataTable("SP_VIEW_LIST_PRIVILEGE", ref dt);
             if (dt.Rows.Count <= 0) return;
 
             foreach (DataRow dr in dt.Rows)

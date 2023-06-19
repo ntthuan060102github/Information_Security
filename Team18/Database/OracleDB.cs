@@ -1,14 +1,17 @@
 ﻿using System;
-using System.Data;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Net.NetworkInformation;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 
-namespace Tutorial.SqlConn
+namespace Team18.Database
 {
-    class DBOracleParameters : List<OracleParameter>
+    public class DBOracleParameters : List<OracleParameter>
     {
         public void Add(OracleParameter item, Object value)
         {
@@ -16,8 +19,47 @@ namespace Tutorial.SqlConn
             this.Add(item);
         }
     }
-    class DBOracleUtils
+    public static class OracleDB
     {
+        public static OracleConnection conn;
+        public static string connectionString = "Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))(CONNECT_DATA = (SERVICE_NAME = ATBM_QLNV_PDB)));";
+
+        public static void connectToOracle(string username, string password)
+        {
+            connectionString = "Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))(CONNECT_DATA = (SERVICE_NAME = ATBM_QLNV_PDB)));";
+            if (username != "")
+            {
+                connectionString += "User Id = " + username + "; Password = " + password + ";";
+            }
+
+            conn = new OracleConnection(connectionString);
+            conn.Open();
+        }
+
+        public static void closeConnection()
+        {
+            conn.Close();
+        }
+
+        public static string getRoleOfUser(string username)
+        {
+            string MaNV = username.Substring(2);
+            string role = "";
+            try
+            {
+                OracleCommand cmd = OracleDB.conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT VAITRO FROM ATBM_QLNV.NHANVIEN WHERE MANV = :MaNV";
+                cmd.Parameters.Add(new OracleParameter("MaNV", MaNV));
+                role = cmd.ExecuteScalar().ToString();
+                return role;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+            return role;
+        }
 
         public static OracleConnection GetDBConnection(string host, int port, String sid, String username, String password)
         {
@@ -33,7 +75,7 @@ namespace Tutorial.SqlConn
             OracleConnection conn = new OracleConnection();
 
             conn.ConnectionString = connString;
-            
+
             return conn;
         }
 
@@ -82,7 +124,7 @@ namespace Tutorial.SqlConn
             cmd.CommandText = proc_name; //DBUtils.Dbschema + 
             cmd.CommandType = CommandType.StoredProcedure;
 
-            foreach(OracleParameter pa in parameters)
+            foreach (OracleParameter pa in parameters)
             {
                 cmd.Parameters.Add(pa);
             }

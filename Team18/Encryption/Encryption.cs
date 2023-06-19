@@ -7,8 +7,9 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Team18.Database;
 
-namespace Team18
+namespace Team18.Encryption
 {
     public class Encryption
     {

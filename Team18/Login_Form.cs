@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
-using Tutorial.SqlConn;
+using Team18.Database;
+using Team18.Encryption;
 
 namespace Team18
 {
@@ -139,7 +140,7 @@ namespace Team18
                 
                 if (isLogin)
                 {
-                    string key = Encryption.GenerateKey();
+                    string key = Encryption.Encryption.GenerateKey();
                 }
             }
         }

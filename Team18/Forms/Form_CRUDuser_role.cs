@@ -8,7 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Tutorial.SqlConn;
+using Team18.Database;
+using Team18.Encryption;
 
 namespace Team18.Forms
 {
@@ -19,14 +20,14 @@ namespace Team18.Forms
             InitializeComponent();
             DataTable dt = new DataTable();
 
-            DBOracleUtils.ExecProc_OutputDataTable("SP_VIEW_USER_ROLE", ref dt);
+            OracleDB.ExecProc_OutputDataTable("SP_VIEW_USER_ROLE", ref dt);
             
             foreach(DataRow row in dt.Rows)
             {
                 this.comboBox1.Items.Add(row["USERTYPE"] + " - " + row["USERNAME"]);
             }
 
-            DBOracleUtils.ExecProc_OutputDataTable("SP_VIEW_LIST_USER", ref dt);
+            OracleDB.ExecProc_OutputDataTable("SP_VIEW_LIST_USER", ref dt);
 
             foreach (DataRow row in dt.Rows)
             {
@@ -82,7 +83,7 @@ namespace Team18.Forms
                 parameters.Add(new OracleParameter("I_USERNAME", OracleDbType.Varchar2), username);
                 parameters.Add(new OracleParameter("I_PASSWORD", OracleDbType.Varchar2), password);
 
-                var save = DBOracleUtils.ExecProc("SP_CREATE_USER", ref parameters);
+                var save = OracleDB.ExecProc("SP_CREATE_USER", ref parameters);
                 MessageBox.Show(
                     "Success!",
                     "",
@@ -128,7 +129,7 @@ namespace Team18.Forms
 
             DBOracleParameters parameters = new DBOracleParameters();
             parameters.Add(new OracleParameter("I_ROLENAME", OracleDbType.Varchar2), "ROLE_" + role_name);
-            DBOracleUtils.ExecProc("SP_CREATE_ROLE", ref parameters);
+            OracleDB.ExecProc("SP_CREATE_ROLE", ref parameters);
             MessageBox.Show(
                 "Success!",
                 "",
@@ -159,7 +160,7 @@ namespace Team18.Forms
                 parameters.Add(new OracleParameter("I_USERNAME", OracleDbType.Varchar2), username);
                 parameters.Add(new OracleParameter("I_PASSWORD", OracleDbType.Varchar2), password);
 
-                var save = DBOracleUtils.ExecProc("SP_MODIFY_PASSWORD", ref parameters);
+                var save = OracleDB.ExecProc("SP_MODIFY_PASSWORD", ref parameters);
                 MessageBox.Show(
                     "Success!",
                     "",
@@ -201,7 +202,7 @@ namespace Team18.Forms
             parameters.Add(new OracleParameter("I_USERTYPE", OracleDbType.Varchar2), input[0]);
             parameters.Add(new OracleParameter("I_USERNAME", OracleDbType.Varchar2), input[1]);
 
-            DBOracleUtils.ExecProc("SP_DROP_USER", ref parameters);
+            OracleDB.ExecProc("SP_DROP_USER", ref parameters);
             MessageBox.Show(
                     "Success",
                     "Success",
@@ -234,7 +235,7 @@ namespace Team18.Forms
             parameters.Add(new OracleParameter("ACTION_TYPE", OracleDbType.Varchar2), action_type);
             parameters.Add(new OracleParameter("USERNAME", OracleDbType.Varchar2), username);
 
-            DBOracleUtils.ExecProc("SP_LOCK_UNLOCK_USER", ref parameters);
+            OracleDB.ExecProc("SP_LOCK_UNLOCK_USER", ref parameters);
             MessageBox.Show(
                     "Success",
                     "Success",
