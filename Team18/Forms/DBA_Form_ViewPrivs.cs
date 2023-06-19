@@ -12,9 +12,9 @@ using Team18.Encryption;
 
 namespace Team18.Forms
 {
-    public partial class Form_ViewPrivs : Form
+    public partial class DBA_Form_ViewPrivs : Form
     {
-        public Form_ViewPrivs()
+        public DBA_Form_ViewPrivs()
         {
             InitializeComponent();
             DataTable dt = new DataTable();

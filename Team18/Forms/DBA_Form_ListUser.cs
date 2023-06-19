@@ -13,9 +13,9 @@ using Team18.Encryption;
 
 namespace Team18.Forms
 {
-    public partial class Form_ListUser : Form
+    public partial class DBA_Form_ListUser : Form
     {
-        public Form_ListUser()
+        public DBA_Form_ListUser()
         {
             InitializeComponent();
             OracleCommand cmd = OracleDB.conn.CreateCommand();

@@ -1,6 +1,6 @@
 ﻿namespace Team18.Forms
 {
-    partial class Form_Privs
+    partial class DBA_Form_Privs
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace Team18.Forms
 {
-    partial class Form_CRUDuser_role
+    partial class DBA_Form_CRUDuser_role
     {
         /// <summary>
         /// Required designer variable.

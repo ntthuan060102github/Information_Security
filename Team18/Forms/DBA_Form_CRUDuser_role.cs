@@ -13,9 +13,9 @@ using Team18.Encryption;
 
 namespace Team18.Forms
 {
-    public partial class Form_CRUDuser_role : Form
+    public partial class DBA_Form_CRUDuser_role : Form
     {
-        public Form_CRUDuser_role()
+        public DBA_Form_CRUDuser_role()
         {
             InitializeComponent();
             DataTable dt = new DataTable();

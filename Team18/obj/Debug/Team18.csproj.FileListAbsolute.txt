@@ -169,10 +169,6 @@ D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Informa
 D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.csproj.SuggestedBindingRedirects.cache
 D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.DBA_Home.resources
 D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Login_Form.resources
-D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.Form_CRUDuser_role.resources
-D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.Form_Privs.resources
-D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.Form_ListUser.resources
-D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.Form_ViewPrivs.resources
 D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Properties.Resources.resources
 D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.csproj.GenerateResource.cache
 D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.csproj.CoreCompileInputs.cache
@@ -185,3 +181,10 @@ D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Informa
 D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.TaiChinh_Home.resources
 D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.TruongDeAn_Home.resources
 D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.TruongPhong_Home.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.NhanVien_Form_DeAn.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.NhanVien_Form_NVInfo.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.NhanVien_Form_PhongBan.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.DBA_Form_CRUDuser_role.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.DBA_Form_Privs.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.DBA_Form_ListUser.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.DBA_Form_ViewPrivs.resources

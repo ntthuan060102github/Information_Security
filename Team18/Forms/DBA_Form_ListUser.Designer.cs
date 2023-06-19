@@ -1,6 +1,6 @@
 ﻿namespace Team18.Forms
 {
-    partial class Form_ListUser
+    partial class DBA_Form_ListUser
     {
         /// <summary>
         /// Required designer variable.

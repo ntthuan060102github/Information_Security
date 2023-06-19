@@ -93,22 +93,22 @@ namespace Team18
 
         private void btnListUser_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Form_ListUser(), sender);
+            OpenChildForm(new Forms.DBA_Form_ListUser(), sender);
         }
 
         private void btnViewPrivs_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Form_ViewPrivs(), sender);
+            OpenChildForm(new Forms.DBA_Form_ViewPrivs(), sender);
         }
 
         private void btnCRUDuser_role_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Form_CRUDuser_role(), sender);
+            OpenChildForm(new Forms.DBA_Form_CRUDuser_role(), sender);
         }
 
         private void btnPrivs_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Form_Privs(), sender);
+            OpenChildForm(new Forms.DBA_Form_Privs(), sender);
         }
     }
 }

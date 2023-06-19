@@ -16,9 +16,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Team18.Forms
 {
-    public partial class Form_Privs : Form
+    public partial class DBA_Form_Privs : Form
     {
-        public Form_Privs()
+        public DBA_Form_Privs()
         {
             InitializeComponent();
             if (tabControlPrivs.SelectedTab.Text == "Cấp quyền")

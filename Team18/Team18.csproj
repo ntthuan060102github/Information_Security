@@ -86,6 +86,24 @@
       <DependentUpon>BanGiamDoc_Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Encryption\Encryption.cs" />
+    <Compile Include="Forms\NhanVien_Form_DeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NhanVien_Form_DeAn.Designer.cs">
+      <DependentUpon>NhanVien_Form_DeAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NhanVien_Form_NVInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NhanVien_Form_NVInfo.Designer.cs">
+      <DependentUpon>NhanVien_Form_NVInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NhanVien_Form_PhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NhanVien_Form_PhongBan.Designer.cs">
+      <DependentUpon>NhanVien_Form_PhongBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,29 +117,29 @@
       <DependentUpon>DBA_Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DBUtils.cs" />
-    <Compile Include="Forms\Form_CRUDuser_role.cs">
+    <Compile Include="Forms\DBA_Form_CRUDuser_role.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_CRUDuser_role.Designer.cs">
-      <DependentUpon>Form_CRUDuser_role.cs</DependentUpon>
+    <Compile Include="Forms\DBA_Form_CRUDuser_role.Designer.cs">
+      <DependentUpon>DBA_Form_CRUDuser_role.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Privs.cs">
+    <Compile Include="Forms\DBA_Form_Privs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Privs.Designer.cs">
-      <DependentUpon>Form_Privs.cs</DependentUpon>
+    <Compile Include="Forms\DBA_Form_Privs.Designer.cs">
+      <DependentUpon>DBA_Form_Privs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_ListUser.cs">
+    <Compile Include="Forms\DBA_Form_ListUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_ListUser.Designer.cs">
-      <DependentUpon>Form_ListUser.cs</DependentUpon>
+    <Compile Include="Forms\DBA_Form_ListUser.Designer.cs">
+      <DependentUpon>DBA_Form_ListUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_ViewPrivs.cs">
+    <Compile Include="Forms\DBA_Form_ViewPrivs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_ViewPrivs.Designer.cs">
-      <DependentUpon>Form_ViewPrivs.cs</DependentUpon>
+    <Compile Include="Forms\DBA_Form_ViewPrivs.Designer.cs">
+      <DependentUpon>DBA_Form_ViewPrivs.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanSu_Home.cs">
       <SubType>Form</SubType>
@@ -166,20 +184,29 @@
     <EmbeddedResource Include="DBA_Home.resx">
       <DependentUpon>DBA_Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NhanVien_Form_DeAn.resx">
+      <DependentUpon>NhanVien_Form_DeAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NhanVien_Form_NVInfo.resx">
+      <DependentUpon>NhanVien_Form_NVInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NhanVien_Form_PhongBan.resx">
+      <DependentUpon>NhanVien_Form_PhongBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_CRUDuser_role.resx">
-      <DependentUpon>Form_CRUDuser_role.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DBA_Form_CRUDuser_role.resx">
+      <DependentUpon>DBA_Form_CRUDuser_role.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Privs.resx">
-      <DependentUpon>Form_Privs.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DBA_Form_Privs.resx">
+      <DependentUpon>DBA_Form_Privs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_ListUser.resx">
-      <DependentUpon>Form_ListUser.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DBA_Form_ListUser.resx">
+      <DependentUpon>DBA_Form_ListUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_ViewPrivs.resx">
-      <DependentUpon>Form_ViewPrivs.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DBA_Form_ViewPrivs.resx">
+      <DependentUpon>DBA_Form_ViewPrivs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanSu_Home.resx">
       <DependentUpon>NhanSu_Home.cs</DependentUpon>
