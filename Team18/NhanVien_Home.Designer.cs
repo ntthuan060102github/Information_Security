@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnPhanCong = new System.Windows.Forms.Button();
             this.btnDeAn = new System.Windows.Forms.Button();
@@ -35,13 +40,64 @@
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.labelTitle = new System.Windows.Forms.Label();
+            this.panel.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panelTitleBar.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel
+            // 
+            this.panel.Controls.Add(this.panel2);
+            this.panel.Controls.Add(this.panelMenu);
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel.Location = new System.Drawing.Point(0, 0);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(1482, 753);
+            this.panel.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panelChildForm);
+            this.panel2.Controls.Add(this.panelTitleBar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(214, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1268, 753);
+            this.panel2.TabIndex = 10;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.AutoScroll = true;
+            this.panelChildForm.AutoSize = true;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(0, 78);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1268, 675);
+            this.panelChildForm.TabIndex = 11;
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.panelTitleBar.Controls.Add(this.labelTitle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1268, 78);
+            this.panelTitleBar.TabIndex = 10;
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelTitle.Location = new System.Drawing.Point(0, 0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(1268, 78);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Home";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelMenu
             // 
@@ -55,7 +111,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(214, 753);
-            this.panelMenu.TabIndex = 3;
+            this.panelMenu.TabIndex = 8;
             // 
             // btnPhanCong
             // 
@@ -153,67 +209,38 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Team 18";
             // 
-            // panelChildForm
-            // 
-            this.panelChildForm.AutoScroll = true;
-            this.panelChildForm.AutoSize = true;
-            this.panelChildForm.Location = new System.Drawing.Point(214, 78);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1485, 675);
-            this.panelChildForm.TabIndex = 5;
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.panelTitleBar.Controls.Add(this.labelTitle);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(214, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1268, 78);
-            this.panelTitleBar.TabIndex = 5;
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelTitle.Location = new System.Drawing.Point(0, 0);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(1268, 78);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "Home";
-            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // NhanVien_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 753);
-            this.Controls.Add(this.panelTitleBar);
-            this.Controls.Add(this.panelMenu);
-            this.Controls.Add(this.panelChildForm);
+            this.Controls.Add(this.panel);
             this.Name = "NhanVien_Home";
             this.Text = "NhanVien_Home";
+            this.panel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panelTitleBar.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
-            this.panelTitleBar.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Panel panelTitleBar;
+        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Button btnPhanCong;
         private System.Windows.Forms.Button btnDeAn;
         private System.Windows.Forms.Button btnPhongBan;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Button btnPhanCong;
-        private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.Label labelTitle;
     }
 }

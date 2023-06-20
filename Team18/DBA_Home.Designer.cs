@@ -28,118 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnPrivs = new System.Windows.Forms.Button();
-            this.btnCRUDuser_role = new System.Windows.Forms.Button();
-            this.btnViewPrivs = new System.Windows.Forms.Button();
-            this.btnListUser = new System.Windows.Forms.Button();
+            this.panel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnPhanCong = new System.Windows.Forms.Button();
+            this.btnDeAn = new System.Windows.Forms.Button();
+            this.btnPhongBan = new System.Windows.Forms.Button();
+            this.btnNhanVien = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panelMenu.SuspendLayout();
+            this.panel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
-            this.panelChildForm.SuspendLayout();
+            this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelMenu
+            // panel
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.btnPrivs);
-            this.panelMenu.Controls.Add(this.btnCRUDuser_role);
-            this.panelMenu.Controls.Add(this.btnViewPrivs);
-            this.panelMenu.Controls.Add(this.btnListUser);
-            this.panelMenu.Controls.Add(this.panelLogo);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(214, 753);
-            this.panelMenu.TabIndex = 0;
+            this.panel.Controls.Add(this.panel2);
+            this.panel.Controls.Add(this.panelMenu);
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel.Location = new System.Drawing.Point(0, 0);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(1482, 753);
+            this.panel.TabIndex = 2;
             // 
-            // btnPrivs
+            // panel2
             // 
-            this.btnPrivs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPrivs.FlatAppearance.BorderSize = 0;
-            this.btnPrivs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrivs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrivs.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnPrivs.Location = new System.Drawing.Point(0, 225);
-            this.btnPrivs.Name = "btnPrivs";
-            this.btnPrivs.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btnPrivs.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnPrivs.Size = new System.Drawing.Size(214, 44);
-            this.btnPrivs.TabIndex = 4;
-            this.btnPrivs.Text = "Phân quyền";
-            this.btnPrivs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrivs.UseVisualStyleBackColor = true;
-            this.btnPrivs.Click += new System.EventHandler(this.btnPrivs_Click);
+            this.panel2.Controls.Add(this.panelChildForm);
+            this.panel2.Controls.Add(this.panelTitleBar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(214, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1268, 753);
+            this.panel2.TabIndex = 10;
             // 
-            // btnCRUDuser_role
+            // panelChildForm
             // 
-            this.btnCRUDuser_role.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCRUDuser_role.FlatAppearance.BorderSize = 0;
-            this.btnCRUDuser_role.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCRUDuser_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCRUDuser_role.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCRUDuser_role.Location = new System.Drawing.Point(0, 166);
-            this.btnCRUDuser_role.Name = "btnCRUDuser_role";
-            this.btnCRUDuser_role.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btnCRUDuser_role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnCRUDuser_role.Size = new System.Drawing.Size(214, 59);
-            this.btnCRUDuser_role.TabIndex = 3;
-            this.btnCRUDuser_role.Text = "Thêm, xóa, sửa user/role";
-            this.btnCRUDuser_role.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCRUDuser_role.UseVisualStyleBackColor = true;
-            this.btnCRUDuser_role.Click += new System.EventHandler(this.btnCRUDuser_role_Click);
-            // 
-            // btnViewPrivs
-            // 
-            this.btnViewPrivs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnViewPrivs.FlatAppearance.BorderSize = 0;
-            this.btnViewPrivs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewPrivs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewPrivs.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnViewPrivs.Location = new System.Drawing.Point(0, 122);
-            this.btnViewPrivs.Name = "btnViewPrivs";
-            this.btnViewPrivs.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btnViewPrivs.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnViewPrivs.Size = new System.Drawing.Size(214, 44);
-            this.btnViewPrivs.TabIndex = 2;
-            this.btnViewPrivs.Text = "Quyền của user/role";
-            this.btnViewPrivs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewPrivs.UseVisualStyleBackColor = true;
-            this.btnViewPrivs.Click += new System.EventHandler(this.btnViewPrivs_Click);
-            // 
-            // btnListUser
-            // 
-            this.btnListUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListUser.FlatAppearance.BorderSize = 0;
-            this.btnListUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListUser.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnListUser.Location = new System.Drawing.Point(0, 78);
-            this.btnListUser.Name = "btnListUser";
-            this.btnListUser.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btnListUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnListUser.Size = new System.Drawing.Size(214, 44);
-            this.btnListUser.TabIndex = 1;
-            this.btnListUser.Text = "Danh sách user";
-            this.btnListUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnListUser.UseVisualStyleBackColor = true;
-            this.btnListUser.Click += new System.EventHandler(this.btnListUser_Click);
+            this.panelChildForm.AutoScroll = true;
+            this.panelChildForm.AutoSize = true;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(0, 78);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1268, 675);
+            this.panelChildForm.TabIndex = 11;
             // 
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.panelTitleBar.Controls.Add(this.labelTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(214, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1268, 78);
-            this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.TabIndex = 10;
             // 
             // labelTitle
             // 
@@ -153,28 +99,91 @@
             this.labelTitle.Text = "Home";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelChildForm
+            // panelMenu
             // 
-            this.panelChildForm.AutoScroll = true;
-            this.panelChildForm.AutoSize = true;
-            this.panelChildForm.Controls.Add(this.label1);
-            this.panelChildForm.Location = new System.Drawing.Point(214, 78);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1268, 675);
-            this.panelChildForm.TabIndex = 2;
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btnPhanCong);
+            this.panelMenu.Controls.Add(this.btnDeAn);
+            this.panelMenu.Controls.Add(this.btnPhongBan);
+            this.panelMenu.Controls.Add(this.btnNhanVien);
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(214, 753);
+            this.panelMenu.TabIndex = 8;
             // 
-            // label1
+            // btnPhanCong
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(311, 336);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(613, 36);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ứng dụng cho người quản trị cơ sở dữ liệu";
+            this.btnPhanCong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPhanCong.FlatAppearance.BorderSize = 0;
+            this.btnPhanCong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhanCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhanCong.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPhanCong.Location = new System.Drawing.Point(0, 261);
+            this.btnPhanCong.Name = "btnPhanCong";
+            this.btnPhanCong.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnPhanCong.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnPhanCong.Size = new System.Drawing.Size(214, 61);
+            this.btnPhanCong.TabIndex = 4;
+            this.btnPhanCong.Text = "Phân quyền";
+            this.btnPhanCong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhanCong.UseVisualStyleBackColor = true;
+            this.btnPhanCong.Click += new System.EventHandler(this.btnPrivs_Click);
+            // 
+            // btnDeAn
+            // 
+            this.btnDeAn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDeAn.FlatAppearance.BorderSize = 0;
+            this.btnDeAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeAn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDeAn.Location = new System.Drawing.Point(0, 200);
+            this.btnDeAn.Name = "btnDeAn";
+            this.btnDeAn.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnDeAn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnDeAn.Size = new System.Drawing.Size(214, 61);
+            this.btnDeAn.TabIndex = 3;
+            this.btnDeAn.Text = "Thêm, xóa, sửa user/role";
+            this.btnDeAn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeAn.UseVisualStyleBackColor = true;
+            this.btnDeAn.Click += new System.EventHandler(this.btnCRUDuser_role_Click);
+            // 
+            // btnPhongBan
+            // 
+            this.btnPhongBan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPhongBan.FlatAppearance.BorderSize = 0;
+            this.btnPhongBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhongBan.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPhongBan.Location = new System.Drawing.Point(0, 139);
+            this.btnPhongBan.Name = "btnPhongBan";
+            this.btnPhongBan.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnPhongBan.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnPhongBan.Size = new System.Drawing.Size(214, 61);
+            this.btnPhongBan.TabIndex = 2;
+            this.btnPhongBan.Text = "Quyền của user/role";
+            this.btnPhongBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhongBan.UseVisualStyleBackColor = true;
+            this.btnPhongBan.Click += new System.EventHandler(this.btnViewPrivs_Click);
+            // 
+            // btnNhanVien
+            // 
+            this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNhanVien.FlatAppearance.BorderSize = 0;
+            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanVien.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNhanVien.Location = new System.Drawing.Point(0, 78);
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnNhanVien.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnNhanVien.Size = new System.Drawing.Size(214, 61);
+            this.btnNhanVien.TabIndex = 1;
+            this.btnNhanVien.Text = "Danh sách user";
+            this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhanVien.UseVisualStyleBackColor = true;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnListUser_Click);
             // 
             // panelLogo
             // 
@@ -205,34 +214,33 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 753);
-            this.Controls.Add(this.panelChildForm);
-            this.Controls.Add(this.panelTitleBar);
-            this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.panel);
             this.Name = "DBA_Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DBA App";
-            this.panelMenu.ResumeLayout(false);
+            this.panel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panelTitleBar.ResumeLayout(false);
-            this.panelChildForm.ResumeLayout(false);
-            this.panelChildForm.PerformLayout();
+            this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button btnListUser;
-        private System.Windows.Forms.Button btnPrivs;
-        private System.Windows.Forms.Button btnCRUDuser_role;
-        private System.Windows.Forms.Button btnViewPrivs;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Button btnPhanCong;
+        private System.Windows.Forms.Button btnDeAn;
+        private System.Windows.Forms.Button btnPhongBan;
+        private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Label label2;
     }

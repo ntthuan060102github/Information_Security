@@ -86,7 +86,7 @@
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.phanCongDataGridView);
             this.Name = "NhanVien_Form_PhanCong";
-            this.Text = "NhanVien_Form_PhanCong";
+            this.Text = "Thông tin phân công";
             ((System.ComponentModel.ISupportInitialize)(this.phanCongDataGridView)).EndInit();
             this.ResumeLayout(false);
 
