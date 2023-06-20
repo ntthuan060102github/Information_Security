@@ -103,5 +103,10 @@ namespace Team18
         {
             OpenChildForm(new Forms.NhanVien_Form_DeAn(), sender);
         }
+
+        private void btnPhanCong_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.NhanVien_Form_PhanCong(), sender);
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnPhanCong = new System.Windows.Forms.Button();
             this.btnDeAn = new System.Windows.Forms.Button();
             this.btnPhongBan = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btnPhanCong);
             this.panelMenu.Controls.Add(this.btnDeAn);
             this.panelMenu.Controls.Add(this.btnPhongBan);
             this.panelMenu.Controls.Add(this.btnNhanVien);
@@ -55,6 +57,24 @@
             this.panelMenu.Size = new System.Drawing.Size(214, 675);
             this.panelMenu.TabIndex = 3;
             // 
+            // btnPhanCong
+            // 
+            this.btnPhanCong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPhanCong.FlatAppearance.BorderSize = 0;
+            this.btnPhanCong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhanCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhanCong.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPhanCong.Location = new System.Drawing.Point(0, 261);
+            this.btnPhanCong.Name = "btnPhanCong";
+            this.btnPhanCong.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnPhanCong.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnPhanCong.Size = new System.Drawing.Size(214, 61);
+            this.btnPhanCong.TabIndex = 4;
+            this.btnPhanCong.Text = "Thông tin phân công";
+            this.btnPhanCong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhanCong.UseVisualStyleBackColor = true;
+            this.btnPhanCong.Click += new System.EventHandler(this.btnPhanCong_Click);
+            // 
             // btnDeAn
             // 
             this.btnDeAn.Dock = System.Windows.Forms.DockStyle.Top;
@@ -62,11 +82,11 @@
             this.btnDeAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeAn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDeAn.Location = new System.Drawing.Point(0, 166);
+            this.btnDeAn.Location = new System.Drawing.Point(0, 200);
             this.btnDeAn.Name = "btnDeAn";
             this.btnDeAn.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnDeAn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnDeAn.Size = new System.Drawing.Size(214, 59);
+            this.btnDeAn.Size = new System.Drawing.Size(214, 61);
             this.btnDeAn.TabIndex = 3;
             this.btnDeAn.Text = "Thông tin đề án";
             this.btnDeAn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -80,11 +100,11 @@
             this.btnPhongBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhongBan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnPhongBan.Location = new System.Drawing.Point(0, 122);
+            this.btnPhongBan.Location = new System.Drawing.Point(0, 139);
             this.btnPhongBan.Name = "btnPhongBan";
             this.btnPhongBan.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnPhongBan.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnPhongBan.Size = new System.Drawing.Size(214, 44);
+            this.btnPhongBan.Size = new System.Drawing.Size(214, 61);
             this.btnPhongBan.TabIndex = 2;
             this.btnPhongBan.Text = "Thông tin phòng ban";
             this.btnPhongBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,7 +122,7 @@
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnNhanVien.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnNhanVien.Size = new System.Drawing.Size(214, 44);
+            this.btnNhanVien.Size = new System.Drawing.Size(214, 61);
             this.btnNhanVien.TabIndex = 1;
             this.btnNhanVien.Text = "Thông tin nhân viên";
             this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,5 +218,6 @@
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Button btnPhanCong;
     }
 }

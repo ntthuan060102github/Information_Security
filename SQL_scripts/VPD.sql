@@ -36,6 +36,7 @@ CREATE OR REPLACE PACKAGE BODY VPD_PKG AS
     END SET_VAITRO;
 END VPD_PKG;
 /
+--VPD de ap cac chinh sach lien quan den viec xem tren quan he NHANVIEN
 CREATE OR REPLACE FUNCTION VPD_RETRIEVE_NHANVIEN(
     P_SCHEMA IN VARCHAR2,
     P_OBJECT IN VARCHAR2
@@ -48,8 +49,10 @@ AS
     EMP_ROLE VARCHAR2(50) := UPPER(REPLACE(SYS_CONTEXT('VPD_CTX', 'USER_ROLE'), ' ', ''));
     MANAGE_DEPARTMENT VARCHAR2(5);
 BEGIN
+    --CS#2: QL truc tiep duoc xem cac dong du lieu NHANVIEN lien quan den minh hoac nhan vien ma minh quan ly
     IF EMP_ROLE = 'QLTRUCTIEP' THEN
         PREDICATE := 'MANV = ' || '''' || EMP_ID || '''' || ' OR MANQL = ' || '''' || EMP_ID || '''';
+    --CS#3: Truong phong duoc xem cac dong du lieu NHANVIEN cua den minh hoac nhan vien thuoc phong ban cua minh
     ELSIF EMP_ROLE = 'TRUONGPHONG' THEN
         BEGIN
             SELECT MAPB INTO MANAGE_DEPARTMENT
@@ -60,8 +63,10 @@ BEGIN
             WHEN OTHERS THEN MANAGE_DEPARTMENT := 'XXX';
         END;
         PREDICATE := 'MANV = ' || '''' || EMP_ID || '''' || ' OR PHG = ' || '''' || MANAGE_DEPARTMENT || '''';
+    --CS#4: Tai chinh duoc xem tren toan bo quan he NHANVIEN
     ELSIF EMP_ROLE = 'TAICHINH' THEN
         PREDICATE := '1 = 1';
+    --CS#1: Nhan vien duoc xem cac dong du lieu NHANVIEN cua chinh minh
     ELSE
         PREDICATE := 'MANV = ' || '''' || EMP_ID || '''';
     END IF;    
@@ -69,6 +74,7 @@ BEGIN
     RETURN PREDICATE;
 END VPD_RETRIEVE_NHANVIEN;
 /
+--VPD de ap them cac chinh sach lien quan den viec xem truong LUONG, PHUCAP trong NHANVIEN
 CREATE OR REPLACE FUNCTION VPD_SEC_RETRIEVE_NHANVIEN(
     P_SCHEMA IN VARCHAR2,
     P_OBJECT IN VARCHAR2
@@ -79,14 +85,17 @@ AS
     EMP_ID VARCHAR2(7) := SUBSTR(CURR_USER, 3);
     EMP_ROLE VARCHAR2(50) := UPPER(REPLACE(SYS_CONTEXT('VPD_CTX', 'USER_ROLE'), ' ', ''));
 BEGIN
+    --CS#4: Tai chinh duoc xem LUONG, PHUCAP cua toan bo quan he NHANVIEN
     IF EMP_ROLE = 'TAICHINH' THEN
         RETURN '1 = 1';
+    --CS#1: Nhan vien duoc xem LUONG, PHUCAP cua chinh minh
+    --CS#2: QL truc tiep chi duoc xem LUONG, PHUCAP cua chinh minh (khong duoc xem cua nhan vien minh quan ly)
     ELSE
         RETURN 'MANV = ' || '''' || EMP_ID || ''''; 
     END IF;
 END VPD_SEC_RETRIEVE_NHANVIEN;
 /
-
+--VPD de ap cac chinh sach lien quan den viec sua tren quan he NHANVIEN
 CREATE OR REPLACE FUNCTION VPD_UPDATE_NHANVIEN(
     P_SCHEMA IN VARCHAR2,
     P_OBJECT IN VARCHAR2
@@ -98,20 +107,21 @@ AS
     EMP_ROLE VARCHAR2(50) := UPPER(REPLACE(SYS_CONTEXT('VPD_CTX', 'USER_ROLE'), ' ', ''));
     PREDICATE VARCHAR2(1000) DEFAULT '1 = 0';
 BEGIN
---    DBMS_OUTPUT.PUT_LINE(DBMS_SQL.DESCRIBE_COLUMNS);
+    --CS#1: Nhan vien chi duoc sua tren du lieu cua chinh minh
     IF EMP_ROLE IN ('NHANVIEN', 'QLTRUCTIEP', 'TRUONGPHONG') THEN
         PREDICATE := 'MANV = ' || EMP_ID;
+    --CS#4: Tai chinh duoc sua tren thuoc tinh LUONG, PHUCAP
     ELSIF EMP_ROLE = 'TAICHINH' THEN
-        PREDICATE := 'NOT(NOT(EMP_ID = ' || EMP_ID || ') AND (COLUMN_NAME = ''LUONG '' OR COLUMN_NAME = ''PHUCAP '''  ;
-        
+        PREDICATE := 'MANV = ' || '''' || EMP_ID || '''' || ' OR (COLUMN_NAME = ''LUONG '' OR COLUMN_NAME = ''PHUCAP '')'  ;
+    --CS#5: Nhan su duoc cap nhat du lieu tren quan he NHANVIEN voi gia tri mac dinh LUONG, PHUCAP la NULL
     ELSIF EMP_ROLE = 'NHANSU' THEN    
-        PREDICATE := 'LUONG IS NULL AND PHU CAP IS NULL';
+        PREDICATE := '(COLUMN_NAME != ''LUONG '' AND COLUMN_NAME != ''PHUCAP '')';
     END IF;
     
     RETURN PREDICATE;
 END;
 /
-
+--VPD de ap cac chinh sach lien quan den viec xem tren quan he PHANCONG
 CREATE OR REPLACE FUNCTION VPD_RETRIEVE_PHANCONG(
     P_SCHEMA IN VARCHAR2,
     P_OBJECT IN VARCHAR2
@@ -123,19 +133,109 @@ AS
     PREDICATE VARCHAR2(1000) DEFAULT '1 = 0';
     EMP_ROLE VARCHAR2(50) := UPPER(REPLACE(SYS_CONTEXT('VPD_CTX', 'USER_ROLE'), ' ', ''));
 BEGIN
-    -- CS#2: QLTRUCTIEP co the xem cac dong trong PHANCONG lien quan den chinh Q
-    --va cac nhan vien duoc quan ly truc tiep boi Q
+    --CS#2: QLTRUCTIEP co the xem du lieu PHANCONG cua minh va cac nhan vien ma minh quan ly
     IF EMP_ROLE = 'QLTRUCTIEP' THEN
         PREDICATE := 'MANV = ' || '''' || EMP_ID || '''' || 
         ' OR MANV IN (SELECT MANV FROM NHANVIEN WHERE MANQL = ' || 
         '''' || EMP_ID || '''' || ')';
-        
+    --CS#4: Tai chinh duoc xem tren toan bo quan he PHANCONG
+    ELSIF EMP_ROLE = 'TAICHINH' THEN
+        PREDICATE := '1 = 1';
+    --CS#1: Nhan vien duoc xem du lieu PHANCONG cua chinh minh
+    ELSE
+        RETURN 'MANV = ' || '''' || EMP_ID || '''';    
     END IF;
 
     RETURN PREDICATE;
 END VPD_RETRIEVE_PHANCONG;
 /
-
+--VPD de ap cac chinh sach lien quan den viec them tren quan he PHANCONG
+CREATE OR REPLACE FUNCTION VPD_INSERT_PHANCONG(
+    P_SCHEMA IN VARCHAR2,
+    P_OBJECT IN VARCHAR2
+)
+RETURN VARCHAR2
+AS
+    CURR_USER VARCHAR2(10) := SYS_CONTEXT('USERENV', 'SESSION_USER');
+    EMP_ID VARCHAR2(7) := SUBSTR(CURR_USER, 3);
+    EMP_ROLE VARCHAR2(50) := UPPER(REPLACE(SYS_CONTEXT('VPD_CTX', 'USER_ROLE'), ' ', ''));
+    PREDICATE VARCHAR2(1000) DEFAULT '1 = 0';
+    MANAGE_DEPARTMENT VARCHAR2(5);
+BEGIN
+    --CS#3: Truong phong co the them tren quan he PHANCONG lien quan den nhan vien thuoc phong ban cua minh
+    IF EMP_ROLE = 'TRUONGPHONG' THEN
+        BEGIN
+            SELECT MAPB INTO MANAGE_DEPARTMENT
+            FROM PHONGBAN
+            WHERE TRPHG = EMP_ID
+            FETCH FIRST 1 ROWS ONLY;
+        EXCEPTION
+            WHEN OTHERS THEN MANAGE_DEPARTMENT := 'XXX';
+        END;
+        PREDICATE := 'PHG = ' || '''' || MANAGE_DEPARTMENT || '''';
+    END IF;
+    
+    RETURN PREDICATE;
+END;
+/
+--VPD de ap cac chinh sach lien quan den viec sua tren quan he PHANCONG
+CREATE OR REPLACE FUNCTION VPD_UPDATE_PHANCONG(
+    P_SCHEMA IN VARCHAR2,
+    P_OBJECT IN VARCHAR2
+)
+RETURN VARCHAR2
+AS
+    CURR_USER VARCHAR2(10) := SYS_CONTEXT('USERENV', 'SESSION_USER');
+    EMP_ID VARCHAR2(7) := SUBSTR(CURR_USER, 3);
+    EMP_ROLE VARCHAR2(50) := UPPER(REPLACE(SYS_CONTEXT('VPD_CTX', 'USER_ROLE'), ' ', ''));
+    PREDICATE VARCHAR2(1000) DEFAULT '1 = 0';
+    MANAGE_DEPARTMENT VARCHAR2(5);
+BEGIN
+    --CS#3: Truong phong co the sua tren quan he PHANCONG lien quan den nhan vien thuoc phong ban cua minh
+    IF EMP_ROLE = 'TRUONGPHONG' THEN
+        BEGIN
+            SELECT MAPB INTO MANAGE_DEPARTMENT
+            FROM PHONGBAN
+            WHERE TRPHG = EMP_ID
+            FETCH FIRST 1 ROWS ONLY;
+        EXCEPTION
+            WHEN OTHERS THEN MANAGE_DEPARTMENT := 'XXX';
+        END;
+        PREDICATE := 'PHG = ' || '''' || MANAGE_DEPARTMENT || '''';
+    END IF;
+    
+    RETURN PREDICATE;
+END;
+/
+--VPD de ap cac chinh sach lien quan den viec xoa tren quan he PHANCONG
+CREATE OR REPLACE FUNCTION VPD_DELETE_PHANCONG(
+    P_SCHEMA IN VARCHAR2,
+    P_OBJECT IN VARCHAR2
+)
+RETURN VARCHAR2
+AS
+    CURR_USER VARCHAR2(10) := SYS_CONTEXT('USERENV', 'SESSION_USER');
+    EMP_ID VARCHAR2(7) := SUBSTR(CURR_USER, 3);
+    EMP_ROLE VARCHAR2(50) := UPPER(REPLACE(SYS_CONTEXT('VPD_CTX', 'USER_ROLE'), ' ', ''));
+    PREDICATE VARCHAR2(1000) DEFAULT '1 = 0';
+    MANAGE_DEPARTMENT VARCHAR2(5);
+BEGIN
+    --CS#3: Truong phong co the xoa tren quan he PHANCONG lien quan den nhan vien thuoc phong ban cua minh
+    IF EMP_ROLE = 'TRUONGPHONG' THEN
+        BEGIN
+            SELECT MAPB INTO MANAGE_DEPARTMENT
+            FROM PHONGBAN
+            WHERE TRPHG = EMP_ID
+            FETCH FIRST 1 ROWS ONLY;
+        EXCEPTION
+            WHEN OTHERS THEN MANAGE_DEPARTMENT := 'XXX';
+        END;
+        PREDICATE := 'PHG = ' || '''' || MANAGE_DEPARTMENT || '''';
+    END IF;
+    
+    RETURN PREDICATE;
+END;
+/
 BEGIN
     DBMS_RLS.DROP_POLICY(
       object_schema   => 'ATBM_QLNV',
@@ -156,6 +256,21 @@ BEGIN
       object_schema   => 'ATBM_QLNV',
       object_name     => 'PHANCONG',
       policy_name     => 'VPD_RETRIEVE_PHANCONG'
+    );
+    DBMS_RLS.DROP_POLICY(
+      object_schema   => 'ATBM_QLNV',
+      object_name     => 'PHANCONG',
+      policy_name     => 'VPD_INSERT_PHANCONG'
+    );
+    DBMS_RLS.DROP_POLICY(
+      object_schema   => 'ATBM_QLNV',
+      object_name     => 'PHANCONG',
+      policy_name     => 'VPD_UPDATE_PHANCONG'
+    );
+    DBMS_RLS.DROP_POLICY(
+      object_schema   => 'ATBM_QLNV',
+      object_name     => 'PHANCONG',
+      policy_name     => 'VPD_DELETE_PHANCONG'
     );
 EXCEPTION
     WHEN OTHERS THEN RETURN;
@@ -196,6 +311,33 @@ BEGIN
         function_schema  => 'ATBM_QLNV',
         policy_function  => 'VPD_RETRIEVE_PHANCONG',
         statement_types  => 'SELECT'
+    );
+    DBMS_RLS.ADD_POLICY (
+        object_schema    => 'ATBM_QLNV',
+        object_name      => 'PHANCONG',
+        policy_name      => 'VPD_INSERT_PHANCONG',
+        function_schema  => 'ATBM_QLNV',
+        policy_function  => 'VPD_INSERT_PHANCONG',
+        statement_types  => 'INSERT',
+        update_check     => TRUE
+    );
+    DBMS_RLS.ADD_POLICY (
+        object_schema    => 'ATBM_QLNV',
+        object_name      => 'PHANCONG',
+        policy_name      => 'VPD_UPDATE_PHANCONG',
+        function_schema  => 'ATBM_QLNV',
+        policy_function  => 'VPD_UPDATE_PHANCONG',
+        statement_types  => 'UPDATE',
+        update_check     => TRUE
+    );
+    DBMS_RLS.ADD_POLICY (
+        object_schema    => 'ATBM_QLNV',
+        object_name      => 'PHANCONG',
+        policy_name      => 'VPD_DELETE_PHANCONG',
+        function_schema  => 'ATBM_QLNV',
+        policy_function  => 'VPD_DELETE_PHANCONG',
+        statement_types  => 'DELETE',
+        update_check     => TRUE
     );
 END;
 /
