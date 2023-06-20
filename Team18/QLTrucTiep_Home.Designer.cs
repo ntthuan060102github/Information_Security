@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.panelMenu = new System.Windows.Forms.Panel();
             this.btnPhanCong = new System.Windows.Forms.Button();
             this.btnDeAn = new System.Windows.Forms.Button();
             this.btnPhongBan = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
-            this.panelMenu = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel.SuspendLayout();
-            this.panelMenu.SuspendLayout();
-            this.panelLogo.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
+            this.panelMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
@@ -56,6 +56,62 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1482, 753);
             this.panel.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panelChildForm);
+            this.panel2.Controls.Add(this.panelTitleBar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(214, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1268, 753);
+            this.panel2.TabIndex = 10;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.AutoScroll = true;
+            this.panelChildForm.AutoSize = true;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(0, 78);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1268, 675);
+            this.panelChildForm.TabIndex = 11;
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.panelTitleBar.Controls.Add(this.labelTitle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1268, 78);
+            this.panelTitleBar.TabIndex = 10;
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelTitle.Location = new System.Drawing.Point(0, 0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(1268, 78);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Home";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btnPhanCong);
+            this.panelMenu.Controls.Add(this.btnDeAn);
+            this.panelMenu.Controls.Add(this.btnPhongBan);
+            this.panelMenu.Controls.Add(this.btnNhanVien);
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(214, 753);
+            this.panelMenu.TabIndex = 8;
             // 
             // btnPhanCong
             // 
@@ -73,6 +129,7 @@
             this.btnPhanCong.Text = "Thông tin phân công";
             this.btnPhanCong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPhanCong.UseVisualStyleBackColor = true;
+            this.btnPhanCong.Click += new System.EventHandler(this.btnPhanCong_Click);
             // 
             // btnDeAn
             // 
@@ -90,6 +147,7 @@
             this.btnDeAn.Text = "Thông tin đề án";
             this.btnDeAn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeAn.UseVisualStyleBackColor = true;
+            this.btnDeAn.Click += new System.EventHandler(this.btnDeAn_Click);
             // 
             // btnPhongBan
             // 
@@ -107,6 +165,7 @@
             this.btnPhongBan.Text = "Thông tin phòng ban";
             this.btnPhongBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPhongBan.UseVisualStyleBackColor = true;
+            this.btnPhongBan.Click += new System.EventHandler(this.btnPhongBan_Click);
             // 
             // btnNhanVien
             // 
@@ -124,20 +183,7 @@
             this.btnNhanVien.Text = "Thông tin nhân viên";
             this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhanVien.UseVisualStyleBackColor = true;
-            // 
-            // panelMenu
-            // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.btnPhanCong);
-            this.panelMenu.Controls.Add(this.btnDeAn);
-            this.panelMenu.Controls.Add(this.btnPhongBan);
-            this.panelMenu.Controls.Add(this.btnNhanVien);
-            this.panelMenu.Controls.Add(this.panelLogo);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(214, 753);
-            this.panelMenu.TabIndex = 8;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // panelLogo
             // 
@@ -163,48 +209,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Team 18";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panelChildForm);
-            this.panel2.Controls.Add(this.panelTitleBar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(214, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1268, 753);
-            this.panel2.TabIndex = 10;
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.panelTitleBar.Controls.Add(this.labelTitle);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1268, 78);
-            this.panelTitleBar.TabIndex = 10;
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelTitle.Location = new System.Drawing.Point(0, 0);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(1268, 78);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "Home";
-            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.AutoScroll = true;
-            this.panelChildForm.AutoSize = true;
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(0, 78);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1268, 675);
-            this.panelChildForm.TabIndex = 11;
-            // 
             // QLTrucTiep_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -212,14 +216,15 @@
             this.ClientSize = new System.Drawing.Size(1482, 753);
             this.Controls.Add(this.panel);
             this.Name = "QLTrucTiep_Home";
-            this.Text = "QLTrucTiep_Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Home - Quản lý trực tiếp";
             this.panel.ResumeLayout(false);
-            this.panelMenu.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
-            this.panelLogo.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelTitleBar.ResumeLayout(false);
+            this.panelMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             this.ResumeLayout(false);
 
         }

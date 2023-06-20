@@ -135,9 +135,10 @@ AS
 BEGIN
     --CS#2: QLTRUCTIEP co the xem du lieu PHANCONG cua minh va cac nhan vien ma minh quan ly
     IF EMP_ROLE = 'QLTRUCTIEP' THEN
-        PREDICATE := 'MANV = ' || '''' || EMP_ID || '''' || 
-        ' OR MANV IN (SELECT MANV FROM NHANVIEN WHERE MANQL = ' || 
-        '''' || EMP_ID || '''' || ')';
+        PREDICATE := 'MANV = ' || '''' || EMP_ID || '''' || ' OR MANV IN (SELECT MANV FROM ATBM_QLNV.NHANVIEN WHERE MANQL = ' || '''' || EMP_ID || ''')';
+    --CS#3: Truong phong duoc xem tren PHANCONG cua nhan vien thuoc phong ban
+    ELSIF EMP_ROLE = 'TRUONGPHONG' THEN
+        PREDICATE := 'MANV = ' || '''' || EMP_ID || '''' || ' OR MANV IN (SELECT MANV FROM ATBM_QLNV.NHANVIEN WHERE MANV != ' || '''' || EMP_ID || ''')';
     --CS#4: Tai chinh duoc xem tren toan bo quan he PHANCONG
     ELSIF EMP_ROLE = 'TAICHINH' THEN
         PREDICATE := '1 = 1';
@@ -172,7 +173,7 @@ BEGIN
         EXCEPTION
             WHEN OTHERS THEN MANAGE_DEPARTMENT := 'XXX';
         END;
-        PREDICATE := 'PHG = ' || '''' || MANAGE_DEPARTMENT || '''';
+        PREDICATE := 'MANV IN (SELECT MANV FROM ATBM_QLNV.NHANVIEN WHERE PHG = ' || '''' || MANAGE_DEPARTMENT || ''')';
     END IF;
     
     RETURN PREDICATE;
@@ -201,7 +202,7 @@ BEGIN
         EXCEPTION
             WHEN OTHERS THEN MANAGE_DEPARTMENT := 'XXX';
         END;
-        PREDICATE := 'PHG = ' || '''' || MANAGE_DEPARTMENT || '''';
+        PREDICATE := 'MANV IN (SELECT MANV FROM ATBM_QLNV.NHANVIEN WHERE PHG = ' || '''' || MANAGE_DEPARTMENT || ''')';
     END IF;
     
     RETURN PREDICATE;
@@ -230,7 +231,7 @@ BEGIN
         EXCEPTION
             WHEN OTHERS THEN MANAGE_DEPARTMENT := 'XXX';
         END;
-        PREDICATE := 'PHG = ' || '''' || MANAGE_DEPARTMENT || '''';
+        PREDICATE := 'MANV IN (SELECT MANV FROM ATBM_QLNV.NHANVIEN WHERE PHG = ' || '''' || MANAGE_DEPARTMENT || ''')';
     END IF;
     
     RETURN PREDICATE;

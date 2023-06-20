@@ -216,7 +216,8 @@
             this.ClientSize = new System.Drawing.Size(1482, 753);
             this.Controls.Add(this.panel);
             this.Name = "NhanVien_Home";
-            this.Text = "NhanVien_Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Home - Nhân viên";
             this.panel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

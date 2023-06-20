@@ -110,6 +110,12 @@
     <Compile Include="Forms\NhanVien_Form_PhongBan.Designer.cs">
       <DependentUpon>NhanVien_Form_PhongBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TruongPhong_Form_PhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TruongPhong_Form_PhanCong.Designer.cs">
+      <DependentUpon>TruongPhong_Form_PhanCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     <Compile Include="TruongPhong_Home.Designer.cs">
       <DependentUpon>TruongPhong_Home.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BanGiamDoc_Home.resx">
+      <DependentUpon>BanGiamDoc_Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DBA_Home.resx">
       <DependentUpon>DBA_Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NhanVien_Form_PhongBan.resx">
       <DependentUpon>NhanVien_Form_PhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TruongPhong_Form_PhanCong.resx">
+      <DependentUpon>TruongPhong_Form_PhanCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
