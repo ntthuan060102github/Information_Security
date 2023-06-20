@@ -253,4 +253,24 @@ BEGIN
         USER_NAME => 'TGD',
         MAX_READ_LABEL => 'L_BGD:C_MB,C_SX,C_GC:G_TQ'
     );
+    SA_USER_ADMIN.SET_USER_LABELS(
+        POLICY_NAME => 'ATBM_QLNV_OLS_TEST26',
+        USER_NAME => 'GB_MB',
+        MAX_READ_LABEL => 'L_BGD:C_MB,C_SX,C_GC:G_MB'
+    );
+    SA_USER_ADMIN.SET_USER_LABELS(
+        POLICY_NAME => 'ATBM_QLNV_OLS_TEST26',
+        USER_NAME => 'TP_SX_MN',
+        MAX_READ_LABEL => 'L_TP:C_SX:G_MN'
+    );
+    SA_USER_ADMIN.SET_USER_LABELS(
+        POLICY_NAME => 'ATBM_QLNV_OLS_TEST26',
+        USER_NAME => 'TP_SX_MB',
+        MAX_READ_LABEL => 'L_TP:C_SX:G_MB'
+    );
+    SA_USER_ADMIN.SET_USER_LABELS(
+        POLICY_NAME => 'ATBM_QLNV_OLS_TEST26',
+        USER_NAME => 'TP_GC_MN',
+        MAX_READ_LABEL => 'L_TP:C_GC:G_MN'
+    );
 END;
