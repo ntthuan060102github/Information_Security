@@ -115,7 +115,7 @@ BEGIN
         PREDICATE := 'MANV = ' || '''' || EMP_ID || '''' || ' OR (COLUMN_NAME = ''LUONG '' OR COLUMN_NAME = ''PHUCAP '')'  ;
     --CS#5: Nhan su duoc cap nhat du lieu tren quan he NHANVIEN voi gia tri mac dinh LUONG, PHUCAP la NULL
     ELSIF EMP_ROLE = 'NHANSU' THEN    
-        PREDICATE := '(COLUMN_NAME != ''LUONG '' AND COLUMN_NAME != ''PHUCAP '')';
+        PREDICATE := 'LUONG IS NULL AND PHUCAP IS NULL';
     END IF;
     
     RETURN PREDICATE;
