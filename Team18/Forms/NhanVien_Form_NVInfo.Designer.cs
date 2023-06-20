@@ -88,6 +88,7 @@
             // 
             this.nhanVienInfoDataGridView.AllowUserToAddRows = false;
             this.nhanVienInfoDataGridView.AllowUserToDeleteRows = false;
+            this.nhanVienInfoDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.nhanVienInfoDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));

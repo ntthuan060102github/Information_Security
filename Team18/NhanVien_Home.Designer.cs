@@ -35,9 +35,9 @@
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -52,9 +52,9 @@
             this.panelMenu.Controls.Add(this.btnNhanVien);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 78);
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(214, 675);
+            this.panelMenu.Size = new System.Drawing.Size(214, 753);
             this.panelMenu.TabIndex = 3;
             // 
             // btnPhanCong
@@ -153,47 +153,44 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Team 18";
             // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.panelTitleBar.Controls.Add(this.labelTitle);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1482, 78);
-            this.panelTitleBar.TabIndex = 4;
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelTitle.Location = new System.Drawing.Point(559, 22);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(89, 32);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "Home";
-            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panelChildForm
             // 
             this.panelChildForm.AutoScroll = true;
             this.panelChildForm.AutoSize = true;
             this.panelChildForm.Location = new System.Drawing.Point(214, 78);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1268, 675);
+            this.panelChildForm.Size = new System.Drawing.Size(1485, 675);
             this.panelChildForm.TabIndex = 5;
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.panelTitleBar.Controls.Add(this.labelTitle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(214, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1268, 78);
+            this.panelTitleBar.TabIndex = 5;
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelTitle.Location = new System.Drawing.Point(0, 0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(1268, 78);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Home";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // NhanVien_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 753);
-            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelTitleBar);
+            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelChildForm);
             this.Name = "NhanVien_Home";
             this.Text = "NhanVien_Home";
@@ -201,7 +198,6 @@
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.panelTitleBar.ResumeLayout(false);
-            this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,9 +211,9 @@
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Button btnPhanCong;
+        private System.Windows.Forms.Panel panelTitleBar;
+        private System.Windows.Forms.Label labelTitle;
     }
 }
