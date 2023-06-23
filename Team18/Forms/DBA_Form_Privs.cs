@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using Team18.Database;
-using Team18.Encryption;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Team18.Forms

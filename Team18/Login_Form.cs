@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 using Team18.Database;
-using Team18.Encryption;
 
 namespace Team18
 {
@@ -18,7 +17,6 @@ namespace Team18
         private string username="";
         private string password="";
         private string role = "";
-        private Boolean isLogin = false;
         public Login_Form()
         {
             InitializeComponent();
@@ -37,7 +35,7 @@ namespace Team18
                 MessageBox.Show("Vui lòng nhập Username","Error");
             }
             else
-            {    
+            {
                 try
                 {
                     OracleDB.connectToOracle(username, password);
@@ -53,7 +51,7 @@ namespace Team18
                             string user = cmd.ExecuteScalar().ToString();
                             MessageBox.Show("Đăng nhập thành công!");
                             DBUtils.set_username(username);
-                            isLogin = true;
+                            DBUtils.set_password(password);
                             DBA_Home home = new DBA_Home();
                             this.Hide();
                             home.ShowDialog();
@@ -67,7 +65,7 @@ namespace Team18
                     else if (role == "Nhân viên" && OracleDB.getRoleOfUser(username) == "Nhan vien")
                     {
                         DBUtils.set_username(username);
-                        isLogin = true;
+                        DBUtils.set_password(password);
                         NhanVien_Home home = new NhanVien_Home();
                         this.Hide();
                         home.ShowDialog();
@@ -76,7 +74,7 @@ namespace Team18
                     else if (role == "QL trực tiếp" && OracleDB.getRoleOfUser(username) == "QL truc tiep")
                     {
                         DBUtils.set_username(username);
-                        isLogin = true;
+                        DBUtils.set_password(password);
                         QLTrucTiep_Home home = new QLTrucTiep_Home();
                         this.Hide();
                         home.ShowDialog();
@@ -85,7 +83,7 @@ namespace Team18
                     else if (role == "Trưởng phòng" && OracleDB.getRoleOfUser(username) == "Truong phong")
                     {
                         DBUtils.set_username(username);
-                        isLogin = true;
+                        DBUtils.set_password(password);
                         TruongPhong_Home home = new TruongPhong_Home();
                         this.Hide();
                         home.ShowDialog();
@@ -94,7 +92,7 @@ namespace Team18
                     else if (role == "Tài chính" && OracleDB.getRoleOfUser(username) == "Tai chinh")
                     {
                         DBUtils.set_username(username);
-                        isLogin = true;
+                        DBUtils.set_password(password);
                         TaiChinh_Home home = new TaiChinh_Home();
                         this.Hide();
                         home.ShowDialog();
@@ -103,7 +101,7 @@ namespace Team18
                     else if (role == "Nhân sự" && OracleDB.getRoleOfUser(username) == "Nhan su")
                     {
                         DBUtils.set_username(username);
-                        isLogin = true;
+                        DBUtils.set_password(password);
                         TruongDeAn_Home home = new TruongDeAn_Home();
                         this.Hide();
                         home.ShowDialog();
@@ -112,7 +110,7 @@ namespace Team18
                     else if (role == "Trưởng đề án" && OracleDB.getRoleOfUser(username) == "Truong de an")
                     {
                         DBUtils.set_username(username);
-                        isLogin = true;
+                        DBUtils.set_password(password);
                         TruongDeAn_Home home = new TruongDeAn_Home();
                         this.Hide();
                         home.ShowDialog();
@@ -121,7 +119,7 @@ namespace Team18
                     else if (role == "Ban giám đốc" && OracleDB.getRoleOfUser(username) == "Ban giam doc")
                     {
                         DBUtils.set_username(username);
-                        isLogin = true;
+                        DBUtils.set_password(password);
                         BanGiamDoc_Home home = new BanGiamDoc_Home();
                         this.Hide();
                         home.ShowDialog();
@@ -138,10 +136,6 @@ namespace Team18
                     MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
                 }
                 
-                if (isLogin)
-                {
-                    string key = Encryption.Encryption.GenerateKey();
-                }
             }
         }
 

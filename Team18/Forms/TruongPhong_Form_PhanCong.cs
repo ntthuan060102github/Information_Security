@@ -49,7 +49,34 @@ namespace Team18.Forms
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                OracleCommand cmd = OracleDB.conn.CreateCommand();
+                cmd.CommandText = "SELECT * FROM ATBM_QLNV.PHANCONG WHERE MANV = :MANV AND MADA = :MADA";
+                cmd.Parameters.Add(new OracleParameter("MANV", Them_MANV.Text));
+                cmd.Parameters.Add(new OracleParameter("MADA", Them_MADA.Text));
+                OracleDataReader reader = cmd.ExecuteReader();
+                if (!reader.HasRows)
+                {
+                    reader.Close();
+                    OracleCommand cmd2 = OracleDB.conn.CreateCommand();
+                    cmd2.CommandText = "INSERT INTO ATBM_QLNV.PHANCONG(MANV,MADA,THOIGIAN) VALUES(:MANV,:MADA,TO_DATE(:THOIGIAN,'YYYY/MM/DD'))";
+                    cmd2.Parameters.Add(new OracleParameter("MANV", Them_MANV.Text));
+                    cmd2.Parameters.Add(new OracleParameter("MADA", Them_MADA.Text));
+                    cmd2.Parameters.Add(new OracleParameter("THOIGIAN", Them_THOIGIAN.Value.ToString("yyyy/MM/dd")));
+                    cmd2.ExecuteNonQuery();
+                    MessageBox.Show("Thêm thành công!");
+                }
+                else
+                {
+                    reader.Close();
+                    MessageBox.Show("Dữ liệu phân công đã tồn tại, không thể thêm!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -74,7 +101,7 @@ namespace Team18.Forms
                 else
                 {
                     reader.Close();
-                    MessageBox.Show("Không tồn tại dữ liệu phân công!");
+                    MessageBox.Show("Không tồn tại dữ liệu phân công, không thể xóa!");
                 }
             }
             catch(Exception ex)
@@ -85,7 +112,34 @@ namespace Team18.Forms
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                OracleCommand cmd = OracleDB.conn.CreateCommand();
+                cmd.CommandText = "SELECT * FROM ATBM_QLNV.PHANCONG WHERE MANV = :MANV AND MADA = :MADA";
+                cmd.Parameters.Add(new OracleParameter("MANV", CapNhat_MANV.Text));
+                cmd.Parameters.Add(new OracleParameter("MADA", CapNhat_MADA.Text));
+                OracleDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Close();
+                    OracleCommand cmd2 = OracleDB.conn.CreateCommand();
+                    cmd2.CommandText = "UPDATE ATBM_QLNV.PHANCONG SET THOIGIAN = TO_DATE(:THOIGIAN,'YYYY/MM/DD') WHERE MANV = :MANV AND MADA = :MADA";
+                    cmd2.Parameters.Add(new OracleParameter(":THOIGIAN", CapNhat_THOIGIAN.Value.ToString("yyyy/MM/dd")));
+                    cmd2.Parameters.Add(new OracleParameter(":MANV", CapNhat_MANV.Text));
+                    cmd2.Parameters.Add(new OracleParameter(":MADA", CapNhat_MADA.Text)); 
+                    cmd2.ExecuteNonQuery();
+                    MessageBox.Show("Cập nhật thành công!");
+                }
+                else
+                {
+                    reader.Close();
+                    MessageBox.Show("Không tồn tại dữ liệu phân công, không thể cập nhật!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
     }
 }

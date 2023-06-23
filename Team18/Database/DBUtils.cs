@@ -34,7 +34,7 @@ namespace Team18.Database
         {
             string host = "127.0.0.1";
             int port = 1521;
-            string sid = "xe";
+            string sid = "ATBM_QLNV_PDB";
 
             return OracleDB.GetDBConnection(host, port, sid, username, password);
         }

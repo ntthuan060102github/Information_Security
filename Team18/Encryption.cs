@@ -3,55 +3,33 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Team18.Database;
+using System.Security.Cryptography;
 
-namespace Team18.Encryption
+namespace Team18
 {
     public class Encryption
     {
-        private const int KeySize = 128;
-
-        public static string GenerateKey()
-        {
-            using (Aes aes = Aes.Create())
-            {
-                aes.KeySize = KeySize;
-                aes.GenerateKey();
-                return Convert.ToBase64String(aes.Key);
-            }
-        }
-        public static void SaveKey(string key)
-        {
-            var query = "INSERT INTO KEY_STORAGE (KEY_VALUE) VALUES (:keyValue)";
-            OracleCommand cmd = OracleDB.conn.CreateCommand();
-            cmd.CommandText = query;
-            cmd.Parameters.Add(new OracleParameter("keyValue", key));
-            cmd.ExecuteNonQuery();
-        }
+        private const int KeySize = 256; //key có độ dài 256 bits - 32 bytes
+        private static string key = "ATBM_Team18"; //key dưới dạng string có độ dài tối đa 16 ký tự unicode(mỗi ký tự chiếm 2 bytes)
 
         public static string GetKey()
         {
-            var query = "SELECT KEY_VALUE FROM KEY_STORAGE WHERE ROWNUM = 1 ORDER BY ID DESC";
-            OracleCommand cmd = OracleDB.conn.CreateCommand();
-            cmd.CommandText = query;
-            OracleDataReader reader = cmd.ExecuteReader();
-            if (reader.Read())
-            {
-                reader.Close();
-                return reader.GetString(0);
-            }
-            reader.Close();
-            return null;
+            return key;
         }
 
         public static string EncryptData(string data, string key)
         {
             byte[] encryptedBytes;
-            byte[] keyBytes = Convert.FromBase64String(key);
+            byte[] keyBytes;
+            //Chuyển key dạng chuỗi sang 1 mảng byte gồm 32 bytes sử dụng hàm băm SHA-256
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                keyBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(key));
+            }
 
             using (Aes aes = Aes.Create())
             {
@@ -81,7 +59,11 @@ namespace Team18.Encryption
         public static string DecryptData(string encryptedData, string key)
         {
             byte[] encryptedBytes = Convert.FromBase64String(encryptedData);
-            byte[] keyBytes = Convert.FromBase64String(key);
+            byte[] keyBytes;
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                keyBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(key));
+            }
 
             using (Aes aes = Aes.Create())
             {

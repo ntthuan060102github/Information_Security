@@ -18,7 +18,7 @@ namespace Team18.Forms
         {
             InitializeComponent();
             OracleCommand cmd = OracleDB.conn.CreateCommand();
-            cmd.CommandText = "SELECT NGAYSINH, DIACHI, SODT FROM ATBM_QLNV.NHANVIEN";
+            cmd.CommandText = "SELECT NGAYSINH, DIACHI, SODT FROM ATBM_QLNV.NHANVIEN WHERE 'NV'||MANV = USER";
             OracleDataReader reader = cmd.ExecuteReader();
             reader.Read();
             if (reader.HasRows)
@@ -35,10 +35,23 @@ namespace Team18.Forms
             try
             {
                 OracleCommand cmd = OracleDB.conn.CreateCommand();
-                cmd.CommandText = "SELECT * FROM ATBM_QLNV.NHANVIEN";
+                cmd.CommandText = "SELECT * FROM ATBM_QLNV.NHANVIEN ORDER BY MANV";
                 OracleDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(reader);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    string LUONG = dr["LUONG"].ToString();
+                    var isNumeric_LUONG = int.TryParse(LUONG, out _);
+                    if (!isNumeric_LUONG)
+                        LUONG = Encryption.DecryptData(LUONG, Encryption.GetKey());
+                    dr["LUONG"] = LUONG;
+                    string PHUCAP = dr["PHUCAP"].ToString();
+                    var isNumeric_PHUCAP = int.TryParse(PHUCAP, out _);
+                    if (!isNumeric_PHUCAP)
+                        PHUCAP = Encryption.DecryptData(PHUCAP, Encryption.GetKey());
+                    dr["PHUCAP"] = PHUCAP;
+                }
                 nhanVienInfoDataGridView.DataSource = dt;
             }
             catch (Exception ex)
@@ -52,50 +65,28 @@ namespace Team18.Forms
             string birthday = birthdayDatePicker.Value.ToString("yyyy/MM/dd");
             string address = addressTxb.Text;
             string phoneNumber = phoneNumberTxb.Text;
-            if (birthday != "")
+            if (birthday != "" && address != "" && phoneNumber != "")
             {
                 try
                 {
                     OracleCommand cmd = OracleDB.conn.CreateCommand();
-                    cmd.CommandText = "UPDATE ATBM_QLNV.NHANVIEN SET NGAYSINH = TO_DATE(:birthday,'YYYY/MM/DD')";
+                    cmd.CommandText = "UPDATE ATBM_QLNV.NHANVIEN SET NGAYSINH = TO_DATE(:birthday,'YYYY/MM/DD'), DIACHI = :address, SODT = :phoneNumber";
                     cmd.Parameters.Add(new OracleParameter("birthday", birthday));
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message.ToString());
-                }
-            }
-            if (address!="")
-            {
-                try
-                {
-                    OracleCommand cmd = OracleDB.conn.CreateCommand();
-                    cmd.CommandText = "UPDATE ATBM_QLNV.NHANVIEN SET DIACHI = :address";
                     cmd.Parameters.Add(new OracleParameter("address", address));
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message.ToString());
-                }
-            }
-            if (phoneNumber!="")
-            {
-                try
-                {
-                    OracleCommand cmd = OracleDB.conn.CreateCommand();
-                    cmd.CommandText = "UPDATE ATBM_QLNV.NHANVIEN SET SODT = :phoneNumber";
                     cmd.Parameters.Add(new OracleParameter("phoneNumber", phoneNumber));
                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cập nhật thành công!");
+                    btnLoad_Click(null, null);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message.ToString());
                 }
             }
-            MessageBox.Show("Cập nhật thành công!");
-            
+            else
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+
+
         }
 
     }

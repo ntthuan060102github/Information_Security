@@ -24,7 +24,7 @@ namespace Team18.Forms
             try
             {
                 OracleCommand cmd = OracleDB.conn.CreateCommand();
-                cmd.CommandText = "SELECT * FROM ATBM_QLNV.PHANCONG";
+                cmd.CommandText = "SELECT * FROM ATBM_QLNV.PHANCONG ORDER BY MANV, MADA";
                 OracleDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(reader);

@@ -1,5 +1,5 @@
 SET WRAP ON;
-CONN SYS/Thuan123@//localhost:1521/ATBM_QLNV_PDB AS SYSDBA;
+CONN SYS/admin@//localhost:1521/ATBM_QLNV_PDB AS SYSDBA;
 
 --------------------------------------------------------------------------------
 -- CS: Nhung nguoi da cap nhat truong THOIGIAN trong quan he phan cong

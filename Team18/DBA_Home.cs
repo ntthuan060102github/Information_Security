@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Team18.Database;
-using Team18.Encryption;
 
 namespace Team18
 {
@@ -110,5 +109,6 @@ namespace Team18
         {
             OpenChildForm(new Forms.DBA_Form_Privs(), sender);
         }
+
     }
 }
