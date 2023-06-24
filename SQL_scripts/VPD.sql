@@ -113,9 +113,9 @@ BEGIN
     --CS#4: Tai chinh duoc cap nhat LUONG, PHUCAP cua toan bo NHANVIEN nhung chi duoc cap nhat NGAYSINH, DIACHI, SODT cua chinh minh (trong VPD_SEC_UPDATE_NHANVIEN)
     ELSIF EMP_ROLE = 'TAICHINH' THEN
         PREDICATE := '1 = 1';
-    --CS#5: Nhan su duoc cap nhat du lieu tren toan quan he NHANVIEN nhung khong duoc cap nhat LUONG, PHUCAP
+    --CS#5: Nhan su duoc cap nhat du lieu tren toan quan he NHANVIEN nhung khong duoc cap nhat LUONG, PHUCAP (trong VPD_THIRD_UPDATE_NHANVIEN)
     ELSIF EMP_ROLE = 'NHANSU' THEN    
-        PREDICATE := 'LUONG IS NULL AND PHUCAP IS NULL';
+        PREDICATE := '1 = 1';
     END IF;
     
     RETURN PREDICATE;
@@ -137,6 +137,33 @@ BEGIN
     --CS#4: Tai chinh chi duoc cap nhat NGAYSINH, DIACHI, SODT cua minh
     IF EMP_ROLE = 'TAICHINH' THEN
         PREDICATE := 'MANV = ' || EMP_ID;
+    --CS#5: Nhan su duoc cap nhat toan bo NGAYSINH, DIACHI, SODT
+    ELSIF EMP_ROLE = 'NHANSU' THEN
+        PREDICATE := '1 = 1';
+    END IF;
+    
+    RETURN PREDICATE;
+END;
+/
+
+--VPD de ap cac chinh sach lien quan den viec sua LUONG, PHUCAP tren quan he NHANVIEN
+CREATE OR REPLACE FUNCTION VPD_THIRD_UPDATE_NHANVIEN(
+    P_SCHEMA IN VARCHAR2,
+    P_OBJECT IN VARCHAR2
+)
+RETURN VARCHAR2
+AS
+    CURR_USER VARCHAR2(10) := SYS_CONTEXT('USERENV', 'SESSION_USER');
+    EMP_ID VARCHAR2(7) := SUBSTR(CURR_USER, 3);
+    EMP_ROLE VARCHAR2(50) := UPPER(REPLACE(SYS_CONTEXT('VPD_CTX', 'USER_ROLE'), ' ', ''));
+    PREDICATE VARCHAR2(1000) DEFAULT '1 = 0';
+BEGIN
+    --CS#4: Tai chinh chi duoc cap nhat LUONG, PHUCAP
+    IF EMP_ROLE = 'TAICHINH' THEN
+        PREDICATE := '1 = 1';
+    --CS#5: Nhan su khong duoc cap nhat LUONG, PHUCAP
+    ELSIF EMP_ROLE = 'NHANSU' THEN
+        PREDICATE := '1 = 0';
     END IF;
     
     RETURN PREDICATE;
@@ -282,6 +309,11 @@ BEGIN
     );
     DBMS_RLS.DROP_POLICY(
       object_schema   => 'ATBM_QLNV',
+      object_name     => 'NHANVIEN',
+      policy_name     => 'VPD_THIRD_UPDATE_NHANVIEN'
+    );
+    DBMS_RLS.DROP_POLICY(
+      object_schema   => 'ATBM_QLNV',
       object_name     => 'PHANCONG',
       policy_name     => 'VPD_RETRIEVE_PHANCONG'
     );
@@ -340,6 +372,16 @@ BEGIN
         policy_function  => 'VPD_SEC_UPDATE_NHANVIEN',
         statement_types  => 'UPDATE',
         sec_relevant_cols => 'NGAYSINH,DIACHI,SODT',
+        update_check     => TRUE
+    );
+    DBMS_RLS.ADD_POLICY (
+        object_schema    => 'ATBM_QLNV',
+        object_name      => 'NHANVIEN',
+        policy_name      => 'VPD_THIRD_UPDATE_NHANVIEN',
+        function_schema  => 'ATBM_QLNV',
+        policy_function  => 'VPD_THIRD_UPDATE_NHANVIEN',
+        statement_types  => 'UPDATE',
+        sec_relevant_cols => 'LUONG,PHUCAP',
         update_check     => TRUE
     );
      DBMS_RLS.ADD_POLICY (
