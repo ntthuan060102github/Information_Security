@@ -42,15 +42,23 @@ namespace Team18.Forms
                 foreach (DataRow dr in dt.Rows)
                 {
                     string LUONG = dr["LUONG"].ToString();
-                    var isNumeric_LUONG = int.TryParse(LUONG, out _);
-                    if (!isNumeric_LUONG)
-                        LUONG = Encryption.DecryptData(LUONG, Encryption.GetKey());
-                    dr["LUONG"] = LUONG;
+                    if (LUONG != "")
+                    {
+                        var isNumeric_LUONG = int.TryParse(LUONG, out _);
+                        if (!isNumeric_LUONG)
+                            LUONG = Encryption.DecryptData(LUONG, Encryption.GetKey());
+                        dr["LUONG"] = LUONG;
+                    }
+                    
                     string PHUCAP = dr["PHUCAP"].ToString();
-                    var isNumeric_PHUCAP = int.TryParse(PHUCAP, out _);
-                    if (!isNumeric_PHUCAP)
-                        PHUCAP = Encryption.DecryptData(PHUCAP, Encryption.GetKey());
-                    dr["PHUCAP"] = PHUCAP;
+                    if (PHUCAP != "")
+                    {
+                        var isNumeric_PHUCAP = int.TryParse(PHUCAP, out _);
+                        if (!isNumeric_PHUCAP)
+                            PHUCAP = Encryption.DecryptData(PHUCAP, Encryption.GetKey());
+                        dr["PHUCAP"] = PHUCAP;
+                    }
+                    
                 }
                 nhanVienInfoDataGridView.DataSource = dt;
             }

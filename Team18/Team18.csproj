@@ -86,6 +86,24 @@
       <DependentUpon>BanGiamDoc_Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Encryption.cs" />
+    <Compile Include="Forms\BanGiamDoc_Form_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BanGiamDoc_Form_NhanVien.Designer.cs">
+      <DependentUpon>BanGiamDoc_Form_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NhanSu_Form_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NhanSu_Form_NhanVien.Designer.cs">
+      <DependentUpon>NhanSu_Form_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NhanSu_Form_PhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NhanSu_Form_PhongBan.Designer.cs">
+      <DependentUpon>NhanSu_Form_PhongBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\NhanVien_Form_DeAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +133,12 @@
     </Compile>
     <Compile Include="Forms\TaiChinh_Form_UpdateNV.Designer.cs">
       <DependentUpon>TaiChinh_Form_UpdateNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TruongDeAn_Form_DeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TruongDeAn_Form_DeAn.Designer.cs">
+      <DependentUpon>TruongDeAn_Form_DeAn.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TruongPhong_Form_PhanCong.cs">
       <SubType>Form</SubType>
@@ -205,6 +229,15 @@
     <EmbeddedResource Include="DBA_Home.resx">
       <DependentUpon>DBA_Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BanGiamDoc_Form_NhanVien.resx">
+      <DependentUpon>BanGiamDoc_Form_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NhanSu_Form_NhanVien.resx">
+      <DependentUpon>NhanSu_Form_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NhanSu_Form_PhongBan.resx">
+      <DependentUpon>NhanSu_Form_PhongBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\NhanVien_Form_DeAn.resx">
       <DependentUpon>NhanVien_Form_DeAn.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TaiChinh_Form_UpdateNV.resx">
       <DependentUpon>TaiChinh_Form_UpdateNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TruongDeAn_Form_DeAn.resx">
+      <DependentUpon>TruongDeAn_Form_DeAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TruongPhong_Form_PhanCong.resx">
       <DependentUpon>TruongPhong_Form_PhanCong.cs</DependentUpon>

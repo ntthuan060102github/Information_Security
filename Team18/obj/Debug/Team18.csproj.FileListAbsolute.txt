@@ -192,3 +192,7 @@ D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Informa
 D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.BanGiamDoc_Home.resources
 D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.TruongPhong_Form_PhanCong.resources
 D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.TaiChinh_Form_UpdateNV.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.NhanSu_Form_PhongBan.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.NhanSu_Form_NhanVien.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.TruongDeAn_Form_DeAn.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_ATBM CSDL\Projects\Source\Information_Security\Team18\obj\Debug\Team18.Forms.BanGiamDoc_Form_NhanVien.resources

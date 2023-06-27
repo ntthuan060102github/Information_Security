@@ -28,20 +28,262 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnNhanVien_NhanSu = new System.Windows.Forms.Button();
+            this.btnPhongBan_NhanSu = new System.Windows.Forms.Button();
+            this.btnPhanCong = new System.Windows.Forms.Button();
+            this.btnDeAn = new System.Windows.Forms.Button();
+            this.btnPhongBan = new System.Windows.Forms.Button();
+            this.btnNhanVien = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panelTitleBar.SuspendLayout();
+            this.panelMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel
+            // 
+            this.panel.Controls.Add(this.panel2);
+            this.panel.Controls.Add(this.panelMenu);
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel.Location = new System.Drawing.Point(0, 0);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(1482, 753);
+            this.panel.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panelChildForm);
+            this.panel2.Controls.Add(this.panelTitleBar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(214, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1268, 753);
+            this.panel2.TabIndex = 10;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.AutoScroll = true;
+            this.panelChildForm.AutoSize = true;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(0, 78);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1268, 675);
+            this.panelChildForm.TabIndex = 11;
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.panelTitleBar.Controls.Add(this.labelTitle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1268, 78);
+            this.panelTitleBar.TabIndex = 10;
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelTitle.Location = new System.Drawing.Point(0, 0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(1268, 78);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Home";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btnNhanVien_NhanSu);
+            this.panelMenu.Controls.Add(this.btnPhongBan_NhanSu);
+            this.panelMenu.Controls.Add(this.btnPhanCong);
+            this.panelMenu.Controls.Add(this.btnDeAn);
+            this.panelMenu.Controls.Add(this.btnPhongBan);
+            this.panelMenu.Controls.Add(this.btnNhanVien);
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(214, 753);
+            this.panelMenu.TabIndex = 8;
+            // 
+            // btnNhanVien_NhanSu
+            // 
+            this.btnNhanVien_NhanSu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNhanVien_NhanSu.FlatAppearance.BorderSize = 0;
+            this.btnNhanVien_NhanSu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanVien_NhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanVien_NhanSu.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNhanVien_NhanSu.Location = new System.Drawing.Point(0, 383);
+            this.btnNhanVien_NhanSu.Name = "btnNhanVien_NhanSu";
+            this.btnNhanVien_NhanSu.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnNhanVien_NhanSu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnNhanVien_NhanSu.Size = new System.Drawing.Size(214, 61);
+            this.btnNhanVien_NhanSu.TabIndex = 6;
+            this.btnNhanVien_NhanSu.Text = "Thêm, cập nhật nhân viên";
+            this.btnNhanVien_NhanSu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhanVien_NhanSu.UseVisualStyleBackColor = true;
+            this.btnNhanVien_NhanSu.Click += new System.EventHandler(this.btnNhanVien_NhanSu_Click);
+            // 
+            // btnPhongBan_NhanSu
+            // 
+            this.btnPhongBan_NhanSu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPhongBan_NhanSu.FlatAppearance.BorderSize = 0;
+            this.btnPhongBan_NhanSu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhongBan_NhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhongBan_NhanSu.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPhongBan_NhanSu.Location = new System.Drawing.Point(0, 322);
+            this.btnPhongBan_NhanSu.Name = "btnPhongBan_NhanSu";
+            this.btnPhongBan_NhanSu.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnPhongBan_NhanSu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnPhongBan_NhanSu.Size = new System.Drawing.Size(214, 61);
+            this.btnPhongBan_NhanSu.TabIndex = 5;
+            this.btnPhongBan_NhanSu.Text = "Thêm, cập nhật phòng ban";
+            this.btnPhongBan_NhanSu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhongBan_NhanSu.UseVisualStyleBackColor = true;
+            this.btnPhongBan_NhanSu.Click += new System.EventHandler(this.btnPhongBan_NhanSu_Click);
+            // 
+            // btnPhanCong
+            // 
+            this.btnPhanCong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPhanCong.FlatAppearance.BorderSize = 0;
+            this.btnPhanCong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhanCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhanCong.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPhanCong.Location = new System.Drawing.Point(0, 261);
+            this.btnPhanCong.Name = "btnPhanCong";
+            this.btnPhanCong.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnPhanCong.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnPhanCong.Size = new System.Drawing.Size(214, 61);
+            this.btnPhanCong.TabIndex = 4;
+            this.btnPhanCong.Text = "Thông tin phân công";
+            this.btnPhanCong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhanCong.UseVisualStyleBackColor = true;
+            this.btnPhanCong.Click += new System.EventHandler(this.btnPhanCong_Click);
+            // 
+            // btnDeAn
+            // 
+            this.btnDeAn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDeAn.FlatAppearance.BorderSize = 0;
+            this.btnDeAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeAn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDeAn.Location = new System.Drawing.Point(0, 200);
+            this.btnDeAn.Name = "btnDeAn";
+            this.btnDeAn.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnDeAn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnDeAn.Size = new System.Drawing.Size(214, 61);
+            this.btnDeAn.TabIndex = 3;
+            this.btnDeAn.Text = "Thông tin đề án";
+            this.btnDeAn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeAn.UseVisualStyleBackColor = true;
+            this.btnDeAn.Click += new System.EventHandler(this.btnDeAn_Click);
+            // 
+            // btnPhongBan
+            // 
+            this.btnPhongBan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPhongBan.FlatAppearance.BorderSize = 0;
+            this.btnPhongBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhongBan.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPhongBan.Location = new System.Drawing.Point(0, 139);
+            this.btnPhongBan.Name = "btnPhongBan";
+            this.btnPhongBan.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnPhongBan.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnPhongBan.Size = new System.Drawing.Size(214, 61);
+            this.btnPhongBan.TabIndex = 2;
+            this.btnPhongBan.Text = "Thông tin phòng ban";
+            this.btnPhongBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhongBan.UseVisualStyleBackColor = true;
+            this.btnPhongBan.Click += new System.EventHandler(this.btnPhongBan_Click);
+            // 
+            // btnNhanVien
+            // 
+            this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNhanVien.FlatAppearance.BorderSize = 0;
+            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanVien.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNhanVien.Location = new System.Drawing.Point(0, 78);
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnNhanVien.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnNhanVien.Size = new System.Drawing.Size(214, 61);
+            this.btnNhanVien.TabIndex = 1;
+            this.btnNhanVien.Text = "Thông tin nhân viên";
+            this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhanVien.UseVisualStyleBackColor = true;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelLogo.Controls.Add(this.label2);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(214, 78);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(41, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 34);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Team 18";
             // 
             // NhanSu_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 753);
+            this.Controls.Add(this.panel);
             this.Name = "NhanSu_Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NhanSu_Home";
+            this.Text = "Home - Nhân sự";
+            this.panel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Panel panelTitleBar;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Button btnPhanCong;
+        private System.Windows.Forms.Button btnDeAn;
+        private System.Windows.Forms.Button btnPhongBan;
+        private System.Windows.Forms.Button btnNhanVien;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnPhongBan_NhanSu;
+        private System.Windows.Forms.Button btnNhanVien_NhanSu;
     }
 }

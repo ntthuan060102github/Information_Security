@@ -66,6 +66,11 @@ BEGIN
     --CS#4: Tai chinh duoc xem tren toan bo quan he NHANVIEN
     ELSIF EMP_ROLE = 'TAICHINH' THEN
         PREDICATE := '1 = 1';
+    --CS#5: Nhan su duoc quyen xem toan bo NHANVIEN nhung chi duoc xem LUONG, PHUCAP cua chinh minh (bo sung)
+    ELSIF EMP_ROLE = 'NHANSU' THEN
+        PREDICATE := '1 = 1';
+    ELSIF EMP_ROLE = 'BANGIAMDOC' THEN
+        PREDICATE := '1 = 1';
     --CS#1: Nhan vien duoc xem cac dong du lieu NHANVIEN cua chinh minh
     ELSE
         PREDICATE := 'MANV = ' || '''' || EMP_ID || '''';
@@ -170,6 +175,7 @@ BEGIN
 END;
 /
 
+
 --VPD de ap cac chinh sach lien quan den viec xem tren quan he PHANCONG
 CREATE OR REPLACE FUNCTION VPD_RETRIEVE_PHANCONG(
     P_SCHEMA IN VARCHAR2,
@@ -185,11 +191,16 @@ BEGIN
     --CS#2: QLTRUCTIEP co the xem du lieu PHANCONG cua minh va cac nhan vien ma minh quan ly
     IF EMP_ROLE = 'QLTRUCTIEP' THEN
         PREDICATE := 'MANV = ' || '''' || EMP_ID || '''' || ' OR MANV IN (SELECT MANV FROM ATBM_QLNV.NHANVIEN WHERE MANQL = ' || '''' || EMP_ID || ''')';
-    --CS#3: Truong phong duoc xem tren PHANCONG cua nhan vien thuoc phong ban
+    --CS#3: Truong phong duoc xem PHANCONG cua nhan vien thuoc phong ban (bo sung)
     ELSIF EMP_ROLE = 'TRUONGPHONG' THEN
         PREDICATE := 'MANV = ' || '''' || EMP_ID || '''' || ' OR MANV IN (SELECT MANV FROM ATBM_QLNV.NHANVIEN WHERE MANV != ' || '''' || EMP_ID || ''')';
     --CS#4: Tai chinh duoc xem tren toan bo quan he PHANCONG
     ELSIF EMP_ROLE = 'TAICHINH' THEN
+        PREDICATE := '1 = 1';
+    --CS#6: Truong de an duoc xem toan bo quan he PHANCONG (bo sung)
+    ELSIF EMP_ROLE = 'TRUONGDEAN' THEN
+        PREDICATE := '1 = 1';
+    ELSIF EMP_ROLE = 'BANGIAMDOC' THEN
         PREDICATE := '1 = 1';
     --CS#1: Nhan vien duoc xem du lieu PHANCONG cua chinh minh
     ELSE

@@ -102,7 +102,7 @@ namespace Team18
                     {
                         DBUtils.set_username(username);
                         DBUtils.set_password(password);
-                        TruongDeAn_Home home = new TruongDeAn_Home();
+                        NhanSu_Home home = new NhanSu_Home();
                         this.Hide();
                         home.ShowDialog();
                         this.Show();
