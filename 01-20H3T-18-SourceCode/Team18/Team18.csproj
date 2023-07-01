@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9BBB8C00-5E52-4173-8913-A75E745555B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Team18</RootNamespace>
+    <AssemblyName>Team18</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.21.9.0\lib\net462\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BanGiamDoc_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BanGiamDoc_Home.Designer.cs">
+      <DependentUpon>BanGiamDoc_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encryption.cs" />
+    <Compile Include="Forms\BanGiamDoc_Form_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BanGiamDoc_Form_NhanVien.Designer.cs">
+      <DependentUpon>BanGiamDoc_Form_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NhanSu_Form_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NhanSu_Form_NhanVien.Designer.cs">
+      <DependentUpon>NhanSu_Form_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NhanSu_Form_NVInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NhanSu_Form_NVInfo.Designer.cs">
+      <DependentUpon>NhanSu_Form_NVInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NhanSu_Form_PhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NhanSu_Form_PhongBan.Designer.cs">
+      <DependentUpon>NhanSu_Form_PhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NhanVien_Form_DeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NhanVien_Form_DeAn.Designer.cs">
+      <DependentUpon>NhanVien_Form_DeAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NhanVien_Form_NVInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NhanVien_Form_NVInfo.Designer.cs">
+      <DependentUpon>NhanVien_Form_NVInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NhanVien_Form_PhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NhanVien_Form_PhanCong.Designer.cs">
+      <DependentUpon>NhanVien_Form_PhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NhanVien_Form_PhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NhanVien_Form_PhongBan.Designer.cs">
+      <DependentUpon>NhanVien_Form_PhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TaiChinh_Form_UpdateNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TaiChinh_Form_UpdateNV.Designer.cs">
+      <DependentUpon>TaiChinh_Form_UpdateNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TruongDeAn_Form_DeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TruongDeAn_Form_DeAn.Designer.cs">
+      <DependentUpon>TruongDeAn_Form_DeAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TruongPhong_Form_PhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TruongPhong_Form_PhanCong.Designer.cs">
+      <DependentUpon>TruongPhong_Form_PhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBA_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBA_Home.Designer.cs">
+      <DependentUpon>DBA_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DBUtils.cs" />
+    <Compile Include="Forms\DBA_Form_CRUDuser_role.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DBA_Form_CRUDuser_role.Designer.cs">
+      <DependentUpon>DBA_Form_CRUDuser_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DBA_Form_Privs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DBA_Form_Privs.Designer.cs">
+      <DependentUpon>DBA_Form_Privs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DBA_Form_ListUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DBA_Form_ListUser.Designer.cs">
+      <DependentUpon>DBA_Form_ListUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DBA_Form_ViewPrivs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DBA_Form_ViewPrivs.Designer.cs">
+      <DependentUpon>DBA_Form_ViewPrivs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu_Home.Designer.cs">
+      <DependentUpon>NhanSu_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien_Home.Designer.cs">
+      <DependentUpon>NhanVien_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OracleDB.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLTrucTiep_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLTrucTiep_Home.Designer.cs">
+      <DependentUpon>QLTrucTiep_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiChinh_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh_Home.Designer.cs">
+      <DependentUpon>TaiChinh_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeColor.cs" />
+    <Compile Include="TruongDeAn_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn_Home.Designer.cs">
+      <DependentUpon>TruongDeAn_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongPhong_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongPhong_Home.Designer.cs">
+      <DependentUpon>TruongPhong_Home.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BanGiamDoc_Home.resx">
+      <DependentUpon>BanGiamDoc_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBA_Home.resx">
+      <DependentUpon>DBA_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BanGiamDoc_Form_NhanVien.resx">
+      <DependentUpon>BanGiamDoc_Form_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NhanSu_Form_NhanVien.resx">
+      <DependentUpon>NhanSu_Form_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NhanSu_Form_NVInfo.resx">
+      <DependentUpon>NhanSu_Form_NVInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NhanSu_Form_PhongBan.resx">
+      <DependentUpon>NhanSu_Form_PhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NhanVien_Form_DeAn.resx">
+      <DependentUpon>NhanVien_Form_DeAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NhanVien_Form_NVInfo.resx">
+      <DependentUpon>NhanVien_Form_NVInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NhanVien_Form_PhanCong.resx">
+      <DependentUpon>NhanVien_Form_PhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NhanVien_Form_PhongBan.resx">
+      <DependentUpon>NhanVien_Form_PhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TaiChinh_Form_UpdateNV.resx">
+      <DependentUpon>TaiChinh_Form_UpdateNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TruongDeAn_Form_DeAn.resx">
+      <DependentUpon>TruongDeAn_Form_DeAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TruongPhong_Form_PhanCong.resx">
+      <DependentUpon>TruongPhong_Form_PhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DBA_Form_CRUDuser_role.resx">
+      <DependentUpon>DBA_Form_CRUDuser_role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DBA_Form_Privs.resx">
+      <DependentUpon>DBA_Form_Privs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DBA_Form_ListUser.resx">
+      <DependentUpon>DBA_Form_ListUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DBA_Form_ViewPrivs.resx">
+      <DependentUpon>DBA_Form_ViewPrivs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu_Home.resx">
+      <DependentUpon>NhanSu_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_Home.resx">
+      <DependentUpon>NhanVien_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QLTrucTiep_Home.resx">
+      <DependentUpon>QLTrucTiep_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiChinh_Home.resx">
+      <DependentUpon>TaiChinh_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn_Home.resx">
+      <DependentUpon>TruongDeAn_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongPhong_Home.resx">
+      <DependentUpon>TruongPhong_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets'))" />
+  </Target>
+</Project>
